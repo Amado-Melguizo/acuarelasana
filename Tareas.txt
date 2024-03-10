@@ -1,0 +1,22 @@
+Tareas:
+
+* Fase 1
+- Eliminar partes sobrantes
+- Ver textos de las paginas que sean correctos
+- Terminar diseño de las paginas
+- Info de la Biografía
+- Revisar los enlaces
+- Revisar todos los eventos
+- Revisar errores simples
+- Documentacion de como hacer el tema fotos para Melgui
+
+* Fase 2
+- Revision y refactorizacion del código
+- Separar componentes (header y Footer)
+- Mejorar funciones y reestructurar el proyecto (si es necesario)
+
+* Fase 3
+- Api Rest (Fotos)
+- Servicios (Get, post y put)
+- Pagina para las fotos para Ana
+- Refactorizar el código y comentarlo.
