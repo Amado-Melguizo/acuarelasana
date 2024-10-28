@@ -131,15 +131,28 @@
       </div>
       <!-- End Page Header -->
 
-      <!-- Gallery Section -->
-      <section id="gallery" class="gallery">
-        <div class="container-fluid">
-          <div class="row gy-4 justify-content-center" id="galleryAnimalesContainer">
-            <!-- JavaScript will dynamically populate this section -->
-          </div>
-        </div>
-      </section>
-      <!-- End Gallery Section -->
+      <!-- Gallery Section: Imágenes locales -->
+<section id="gallery" class="gallery">
+  <div class="container-fluid">
+    <h3>Fotos de Animales (Locales)</h3>
+    <div class="row gy-4 justify-content-center" id="galleryAnimalesContainer">
+      <!-- JavaScript populates this section -->
+    </div>
+  </div>
+</section>
+<!-- End Gallery Section -->
+
+<!-- Gallery Section: Fotos obtenidas desde la API -->
+<section id="apiGallery" class="gallery">
+  <div class="container-fluid">
+    <h3>Fotos de Animales desde la API</h3>
+    <div class="row gy-4 justify-content-center" id="galleryApiAnimalesContainer">
+      <!-- JavaScript will dynamically populate this section with API data -->
+    </div>
+  </div>
+</section>
+<!-- End Gallery Section -->
+
     </main>
     <!-- End #main -->
 
@@ -180,6 +193,7 @@
 
     <!-- Template Main JS File -->
     <script src="../assets/js/main.js"></script>
-    <script src="../assets/js/animales.js"></script>
+    <script src="../assets/js/animales.js" type="module"></script>
+
   </body>
 </html>
