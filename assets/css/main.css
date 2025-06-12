@@ -14,7 +14,7 @@
 :root {
   --font-default: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font-primary: "Inter", sans-serif;
-  --font-secondary: "Cardo", sans-serif;
+  --font-secondary: "Square Peg", cursive;
 }
 
 /* Colors */
@@ -35,9 +35,11 @@
 body {
   font-family: var(--font-default);
   color: var(--color-default);
-  background-color: #000;
+  background-color: white;
 }
-
+.container{
+  background-color: #f1eee8;
+}
 a {
   color: var(--color-primary);
   text-decoration: none;
@@ -55,6 +57,7 @@ h4,
 h5,
 h6 {
   font-family: var(--font-primary);
+  color: black;
 }
 
 /*--------------------------------------------------------------
@@ -72,7 +75,7 @@ h6 {
   margin: 0 0 5px 0;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.6);
+  color: black;
   font-family: var(--font-primary);
 }
 
@@ -81,7 +84,7 @@ h6 {
   width: 120px;
   height: 1px;
   display: inline-block;
-  background: #5bd9a9;
+  background: gray;
   margin: 4px 10px;
 }
 
@@ -91,7 +94,7 @@ h6 {
   font-size: 36px;
   font-weight: 700;
   font-family: var(--font-secondary);
-  color: #fff;
+  color: black;
 }
 
 /*--------------------------------------------------------------
@@ -106,7 +109,7 @@ h6 {
 .page-header h2 {
   font-size: 56px;
   font-weight: 500;
-  color: #fff;
+  color: black;
   font-family: var(--font-secondary);
 }
 
@@ -286,7 +289,7 @@ h6 {
   transition: all 0.5s;
   z-index: 997;
   padding: 30px 0;
-  background-color: #000;
+  background-color: white;
 }
 
 .header .logo {
@@ -302,7 +305,7 @@ h6 {
   font-size: 32px;
   margin: 0;
   font-weight: 400;
-  color: #fff;
+  color: black;
   font-family: var(--font-secondary);
 }
 
@@ -376,7 +379,7 @@ h6 {
     letter-spacing: 1px;
     font-size: 13px;
     font-weight: 400;
-    color: rgba(255, 255, 255, 0.5);
+    color:black;
     white-space: nowrap;
     transition: 0.3s;
   }
@@ -392,7 +395,7 @@ h6 {
   .navbar .active,
   .navbar .active:focus,
   .navbar li:hover>a {
-    color: #fff;
+    color: lightgrey;
   }
 
   .navbar .dropdown ul {
@@ -405,7 +408,7 @@ h6 {
     z-index: 99;
     opacity: 0;
     visibility: hidden;
-    background: var(--color-secondary);
+    background: white;
     transition: 0.3s;
     border-radius: 4px;
   }
@@ -428,7 +431,7 @@ h6 {
   .navbar .dropdown ul a:hover,
   .navbar .dropdown ul .active:hover,
   .navbar .dropdown ul li:hover>a {
-    color: #fff;
+    color: lightgray;
   }
 
   .navbar .dropdown:hover>ul {
@@ -1176,7 +1179,7 @@ h6 {
 .hero {
   width: 100%;
   min-height: 30vh;
-  background: #000;
+  background: white;
   background-size: cover;
   position: relative;
   padding: 140px 0 60px 0;
@@ -1186,7 +1189,7 @@ h6 {
   margin: 0 0 10px 0;
   font-size: 38px;
   font-weight: 700;
-  color: #fff;
+  color: black;
   font-family: var(--font-secondary);
 }
 
@@ -1204,12 +1207,12 @@ h6 {
   bottom: 0;
   left: 0;
   right: 0;
-  background: var(--color-primary);
+  background: gray;
   z-index: -1;
 }
 
 .hero p {
-  color: rgba(255, 255, 255, 0.6);
+  color:black;
   margin-bottom: 30px;
   font-size: 18px;
 }
@@ -1262,4 +1265,11 @@ h6 {
 
 .footer .credits a {
   color: var(--color-primary);
+}
+
+
+
+.custom-blend {
+  opacity: 0.34;
+  mix-blend-mode: color-burn;
 }
