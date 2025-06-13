@@ -34,19 +34,19 @@
 --------------------------------------------------------------*/
 body {
   font-family: var(--font-default);
-  color: var(--color-default);
+  color: black;
   background-color: white;
 }
 .container{
   background-color: #f1eee8;
 }
 a {
-  color: var(--color-primary);
+  color: black;
   text-decoration: none;
 }
 
 a:hover {
-  color: #32cf93;
+  color: lightgrey;
   text-decoration: none;
 }
 
@@ -120,7 +120,7 @@ h6 {
 }
 
 .page-header p {
-  color: rgba(255, 255, 255, 0.8);
+  color: black;
 }
 
 .page-header .cta-btn {
@@ -588,7 +588,7 @@ h6 {
 .about .content h2 {
   font-weight: 700;
   font-size: 24px;
-  color: var(--color-primary);
+  color: black;
 }
 
 .about .content ul {
@@ -609,7 +609,7 @@ h6 {
 .about .content ul i {
   font-size: 16px;
   margin-right: 5px;
-  color: var(--color-primary);
+  color: black;
   line-height: 0;
 }
 
