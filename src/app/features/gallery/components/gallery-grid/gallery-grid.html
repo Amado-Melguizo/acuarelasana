@@ -1,0 +1,15 @@
+<section id="gallery" class="gallery">
+
+  <div class="container">
+
+    @for(section of sections; track section.title){
+
+      <app-gallery-section
+        [section]="section">
+      </app-gallery-section>
+
+    }
+
+  </div>
+
+</section>

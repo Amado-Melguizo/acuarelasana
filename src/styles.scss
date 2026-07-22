@@ -1,1 +1,47 @@
-/* You can add global styles to this file, and also import other style files */
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;600;700&family=Square+Peg&display=swap');
+
+/* Bootstrap Icons si no los tienes ya */
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css");
+
+:root {
+
+  --font-default: "Open Sans", sans-serif;
+  --font-primary: "Inter", sans-serif;
+  --font-secondary: "Square Peg", cursive;
+
+  --color-default:#fafafa;
+  --color-primary:#27a776;
+  --color-secondary:#161718;
+
+  scroll-behavior:smooth;
+
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    font-family:var(--font-default);
+    background:white;
+    color:var(--color-secondary);
+
+}
+
+a{
+
+    color:inherit;
+    text-decoration:none;
+
+}
+
+img{
+
+    max-width:100%;
+    display:block;
+
+}
