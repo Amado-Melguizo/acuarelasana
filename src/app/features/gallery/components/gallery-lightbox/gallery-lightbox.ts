@@ -1,9 +1,15 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { GalleryImage } from '../../../../shared/interfaces/gallery-section.interface';
 
 @Component({
   selector: 'app-gallery-lightbox',
-  imports: [],
   templateUrl: './gallery-lightbox.html',
-  styleUrl: './gallery-lightbox.scss',
+  styleUrl: './gallery-lightbox.scss'
 })
-export class GalleryLightbox {}
+export class GalleryLightbox {
+
+  @Input() image!: GalleryImage;
+
+  @Output() close = new EventEmitter<void>();
+
+}

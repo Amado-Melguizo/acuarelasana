@@ -1,12 +1,7 @@
 <div class="gallery-card">
-
-  <img
-    [src]="image.src"
-    [alt]="image.alt"
-    class="gallery-image">
+  <img [src]="image.src" [alt]="image.alt" class="gallery-image" />
 
   <div class="gallery-overlay">
-
     <div class="gallery-info">
       <h4>{{ image.title }}</h4>
 
@@ -16,7 +11,7 @@
     </div>
 
     <div class="gallery-actions">
-      <button>
+      <button (click)="openImage()">
         <i class="bi bi-search"></i>
       </button>
 
@@ -24,7 +19,5 @@
         <i class="bi bi-link-45deg"></i>
       </button>
     </div>
-
   </div>
-
 </div>

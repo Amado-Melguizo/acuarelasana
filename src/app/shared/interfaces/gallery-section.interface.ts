@@ -4,9 +4,16 @@ export interface GalleryImage {
   title: string;
 }
 
-export interface GallerySection {
+export interface GalleryCategory {
+  id: string;
+
   title: string;
+
+  description: string;
+
   route: string;
   buttonText: string;
-  images: GalleryImage[];
+  homeImages: GalleryImage[];
+
+  galleryImages: GalleryImage[];
 }

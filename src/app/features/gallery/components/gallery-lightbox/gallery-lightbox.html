@@ -1,1 +1,11 @@
-<p>gallery-lightbox works!</p>
+<div class="lightbox">
+
+    <button class="close" (click)="close.emit()">
+        ✕
+    </button>
+
+    <img
+        [src]="image.src"
+        [alt]="image.alt">
+
+</div>

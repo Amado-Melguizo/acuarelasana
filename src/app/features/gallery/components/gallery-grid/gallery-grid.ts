@@ -4,9 +4,10 @@ import { GallerySectionComponent } from "../../../../shared/components/gallery-s
 
 @Component({
   selector: 'app-gallery-grid',
+  standalone: true,
+  imports: [GallerySectionComponent],
   templateUrl: './gallery-grid.html',
-  styleUrls: ['./gallery-grid.scss'],
-  imports: [GallerySectionComponent]
+  styleUrl: './gallery-grid.scss'
 })
 export class GalleryGridComponent {
 

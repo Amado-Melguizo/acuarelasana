@@ -1,8 +1,121 @@
-#preloader{
+#preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
 
-    position:fixed;
-    inset:0;
-    background:white;
-    z-index:99999;
+/* Las dos cortinas */
+#preloader::before,
+#preloader::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  background: #000;
+  transition: none;
+}
+
+#preloader::before {
+  left: 0;
+}
+
+#preloader::after {
+  right: 0;
+}
+
+/* Línea central */
+.line {
+  position: relative;
+  width: 1px;
+  height: 280px;
+  overflow: hidden;
+  z-index: 2;
+}
+
+/* La línea blanca aparece */
+.line::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 1px;
+  height: 0;
+  background: #fff;
+  transform: translateY(-50%);
+  animation: lineincrease 1s ease forwards;
+}
+
+/* La línea gris se mueve continuamente */
+.line::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1px;
+  height: 100%;
+  background: #999;
+  transform: translateY(100%);
+  animation: linemove 1.2s linear infinite;
+  animation-delay: 1s;
+}
+
+/* Cuando Angular añade la clase loaded */
+#preloader.loaded .line {
+  opacity: 0;
+  transition: opacity .3s;
+}
+
+#preloader.loaded::before {
+  animation: curtainLeft .9s forwards;
+}
+
+#preloader.loaded::after {
+  animation: curtainRight .9s forwards;
+}
+
+/* ---------- Animaciones ---------- */
+
+@keyframes lineincrease {
+
+  from {
+    height: 0;
+  }
+
+  to {
+    height: 100%;
+  }
+
+}
+
+@keyframes linemove {
+
+  from {
+    transform: translateY(100%);
+  }
+
+  to {
+    transform: translateY(-100%);
+  }
+
+}
+
+@keyframes curtainLeft {
+
+  to {
+    transform: translateX(-100%);
+  }
+
+}
+
+@keyframes curtainRight {
+
+  to {
+    transform: translateX(100%);
+  }
 
 }

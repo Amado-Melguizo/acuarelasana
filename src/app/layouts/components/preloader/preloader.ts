@@ -1,9 +1,30 @@
-import { Component } from '@angular/core';
+import { Component, input, signal, effect } from '@angular/core';
 
 @Component({
   selector: 'app-preloader',
-  imports: [],
   templateUrl: './preloader.html',
-  styleUrl: './preloader.scss',
+  styleUrl: './preloader.scss'
 })
-export class Preloader {}
+export class Preloader {
+
+  loaded = input(false);
+
+  finished = signal(false);
+
+  constructor() {
+
+    effect(() => {
+
+      if (!this.loaded()) {
+        return;
+      }
+
+      setTimeout(() => {
+        this.finished.set(true);
+      }, 900);
+
+    });
+
+  }
+
+}

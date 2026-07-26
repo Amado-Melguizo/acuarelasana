@@ -1,32 +1,46 @@
 <!-- ======= Header ======= -->
-<header id="header" class="header d-flex align-items-center fixed-top">
+<header id="header" class="header">
   <div class="header-container">
-    <a routerLink="index" class="logo d-flex align-items-center me-auto me-lg-0">
-      <!-- Uncomment the line below if you also wish to use an image logo -->
+    <a routerLink="/index" class="logo">
       <i class="bi bi-brush"></i>
       <h1>Arte Ana M.</h1>
     </a>
 
     <nav id="navbar" class="navbar">
       <ul>
-        <li><a routerLink="/index" class="active">Home</a></li>
+        <li><a routerLink="/">Home</a></li>
+
         <li><a routerLink="/about">About</a></li>
+
         <li class="dropdown">
-          <a routerLink="#"
-            ><span>Gallery</span> <i class="bi bi-chevron-down dropdown-indicator"></i
-          ></a>
+          <a>Gallery  <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+
           <ul>
-            <li><a routerLink="./gallery/gallery_animales">Animales</a></li>
-            <li><a routerLink="./gallery/gallery_botanica">Botánica</a></li>
             <li>
-              <a routerLink="./gallery/gallery_naturaleza">Naturaleza</a>
+              <a routerLink="/gallery/mundo-animal"> Mundo Animal </a>
             </li>
-            <li><a routerLink="./gallery/gallery_playa">Playa</a></li>
-            <li><a routerLink="./gallery/gallery_veleros">Veleros</a></li>
+
+            <li>
+              <a routerLink="/gallery/botanica"> Arte Botánico </a>
+            </li>
+
+            <li>
+              <a routerLink="/gallery/paisajes-naturales"> Paisajes Naturales </a>
+            </li>
+
+            <li>
+              <a routerLink="/gallery/escenas-playa"> Escenas de Playa </a>
+            </li>
+
+            <li>
+              <a routerLink="/gallery/veleros"> Veleros </a>
+            </li>
           </ul>
         </li>
-        <li><a routerLink="/services">Services</a></li>
-        <li><a routerLink="/contact">Contact</a></li>
+
+        <li><a routerLink="/services">Servicios</a></li>
+
+        <li><a routerLink="/contact">Contacto</a></li>
       </ul>
     </nav>
     <!-- .navbar -->

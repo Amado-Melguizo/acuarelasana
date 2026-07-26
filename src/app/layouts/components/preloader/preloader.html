@@ -1,3 +1,5 @@
-<div id="preloader">
-  <div class="line"></div>
-</div>
+@if (!finished()) {
+  <div id="preloader" [class.loaded]="loaded()">
+    <div class="line"></div>
+  </div>
+}

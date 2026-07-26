@@ -1,8 +1,8 @@
-<section id="gallery" class="gallery">
+<section class="gallery">
 
   <div class="container">
 
-    @for(section of sections; track section.title){
+    @for(section of sections; track section.id){
 
       <app-gallery-section
         [section]="section">
