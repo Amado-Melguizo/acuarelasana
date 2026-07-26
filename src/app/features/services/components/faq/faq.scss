@@ -1,0 +1,45 @@
+.faq{
+
+    padding:90px 0;
+
+}
+
+.faq-item{
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+
+}
+
+.faq-header{
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:22px 0;
+
+    border:none;
+
+    background:none;
+
+    font-size:1.1rem;
+
+    font-weight:600;
+
+    color:inherit;
+
+}
+
+.faq-body{
+
+    padding-bottom:25px;
+
+    opacity:.85;
+
+    line-height:1.8;
+
+}

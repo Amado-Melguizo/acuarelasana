@@ -1,22 +1,17 @@
-<app-preloader></app-preloader>
+<app-preloader [loaded]="!loading"></app-preloader>
 
 <app-header></app-header>
 
-<app-page-hero
-    title="Servicios"
-    description="Encarga una obra personalizada realizada en acuarela.">
-</app-page-hero>
+<app-hero title="Servicios" description="Encarga una obra personalizada realizada en acuarela.">
+</app-hero>
 
 <main>
+  <app-services-list (serviceSelected)="onServiceSelected($event)"> </app-services-list>
+  <app-price-guide></app-price-guide>
 
-    <app-services-list></app-services-list>
+  <app-request-form></app-request-form>
 
-    <app-price-guide></app-price-guide>
-
-    <app-request-form></app-request-form>
-
-    <app-faq></app-faq>
-
+  <app-faq></app-faq>
 </main>
 
 <app-footer></app-footer>

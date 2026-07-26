@@ -1,0 +1,33 @@
+.service-request {
+
+    padding: 80px 0;
+
+}
+
+label {
+
+    font-weight: 600;
+    margin-bottom: .5rem;
+    display: block;
+
+}
+
+.form-control,
+.form-select {
+
+    min-height: 48px;
+
+}
+
+textarea {
+
+    resize: vertical;
+
+}
+
+button {
+
+    margin-top: 1rem;
+    min-width: 220px;
+
+}

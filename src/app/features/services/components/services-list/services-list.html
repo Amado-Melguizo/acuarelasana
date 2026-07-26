@@ -1,0 +1,33 @@
+<section class="services-list">
+  <div class="container">
+    <div class="section-header text-center">
+      <h2>¿Qué puedo realizar para ti?</h2>
+
+      <p>Cada obra es completamente artesanal y personalizada según tus necesidades.</p>
+    </div>
+
+    <div class="row">
+      @for (service of services; track service.title) {
+        <div class="col-lg-6 mb-4">
+          <div class="service-card">
+            <div class="icon">
+              <i class="bi" [class]="service.icon"></i>
+            </div>
+
+            <div class="content">
+              <h3>{{ service.title }}</h3>
+
+              <p>
+                {{ service.description }}
+              </p>
+
+              <button class="btn btn-primary mt-3" (click)="selectService(service)">
+                Solicitar este servicio
+              </button>
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>

@@ -1,0 +1,62 @@
+<section class="price-guide">
+
+    <div class="container">
+
+        <div class="section-header text-center">
+
+            <h2>Guía orientativa de precios</h2>
+
+            <p>
+
+                Cada obra se realiza completamente a mano. El precio final puede
+                variar según la complejidad y los detalles solicitados.
+
+            </p>
+
+        </div>
+
+        <div class="row">
+
+            @for(price of prices; track price.title){
+
+            <div class="col-lg-6 mb-4">
+
+                <div class="price-card">
+
+                    <h3>{{price.title}}</h3>
+
+                    <p>{{price.description}}</p>
+
+                    <span>{{price.price}}</span>
+
+                </div>
+
+            </div>
+
+            }
+
+        </div>
+
+        <div class="price-info">
+
+            <h4>¿Qué puede influir en el precio?</h4>
+
+            <ul>
+
+                <li>Tamaño del cuadro.</li>
+
+                <li>Número de personas o animales.</li>
+
+                <li>Nivel de detalle.</li>
+
+                <li>Materiales utilizados.</li>
+
+                <li>Fecha de entrega.</li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</section>
