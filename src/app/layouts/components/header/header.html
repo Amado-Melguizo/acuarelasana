@@ -1,62 +1,80 @@
-<!-- ======= Header ======= -->
-<header id="header" class="header">
+<header class="header">
   <div class="header-container">
-    <a routerLink="/index" class="logo">
+    <a routerLink="/" class="logo" (click)="closeMenu()">
       <i class="bi bi-brush"></i>
       <h1>Arte Ana M.</h1>
     </a>
 
-    <nav id="navbar" class="navbar">
+    <nav class="navbar" [class.mobile-active]="mobileMenuOpen">
       <ul>
-        <li><a routerLink="/">Home</a></li>
+        <li>
+          <a routerLink="/" (click)="closeMenu()">Home</a>
+        </li>
 
-        <li><a routerLink="/about">About</a></li>
+        <li>
+          <a routerLink="/about" (click)="closeMenu()">About</a>
+        </li>
 
-        <li class="dropdown">
-          <a>Gallery  <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+        <li class="dropdown" [class.open]="galleryOpen">
+          <a class="dropdown-title" (click)="toggleGallery()">
+            Gallery
 
-          <ul>
+            <i class="bi bi-chevron-down" [class.rotate]="galleryOpen"> </i>
+          </a>
+
+          <ul [class.show]="galleryOpen">
             <li>
-              <a routerLink="/gallery/mundo-animal"> Mundo Animal </a>
+              <a routerLink="/gallery/mundo-animal" (click)="closeMenu()"> Mundo Animal </a>
             </li>
 
             <li>
-              <a routerLink="/gallery/botanica"> Arte Botánico </a>
+              <a routerLink="/gallery/botanica" (click)="closeMenu()"> Arte Botánico </a>
             </li>
 
             <li>
-              <a routerLink="/gallery/paisajes-naturales"> Paisajes Naturales </a>
+              <a routerLink="/gallery/paisajes-naturales" (click)="closeMenu()">
+                Paisajes Naturales
+              </a>
             </li>
 
             <li>
-              <a routerLink="/gallery/escenas-playa"> Escenas de Playa </a>
+              <a routerLink="/gallery/escenas-playa" (click)="closeMenu()"> Escenas de Playa </a>
             </li>
 
             <li>
-              <a routerLink="/gallery/veleros"> Veleros </a>
+              <a routerLink="/gallery/veleros" (click)="closeMenu()"> Veleros </a>
             </li>
           </ul>
         </li>
 
-        <li><a routerLink="/services">Servicios</a></li>
+        <li>
+          <a routerLink="/services" (click)="closeMenu()">Servicios</a>
+        </li>
 
-        <li><a routerLink="/contact">Contacto</a></li>
+        <li>
+          <a routerLink="/contact" (click)="closeMenu()">Contacto</a>
+        </li>
       </ul>
     </nav>
-    <!-- .navbar -->
 
-    <div class="header-social-links">
-      <a
-        href="https://es.wallapop.com/app/user/anam-76231494-08z82pdrw8z3/published"
-        class="facebook"
-        ><i class="bi bi-cart"></i
-      ></a>
-      <a href="https://www.instagram.com/a.m.art.inez/" class="instagram"
-        ><i class="bi bi-instagram"></i
-      ></a>
+    <div class="header-social-links desktop-social">
+      <a href="https://es.wallapop.com/app/user/anam-76231494-08z82pdrw8z3/published">
+        <i class="bi bi-cart"></i>
+      </a>
+
+      <a href="https://www.instagram.com/a.m.art.inez/">
+        <i class="bi bi-instagram"></i>
+      </a>
     </div>
-    <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
-    <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+
+    <i
+      class="bi mobile-nav-toggle"
+      [class.bi-list]="!mobileMenuOpen"
+      [class.bi-x]="mobileMenuOpen"
+      (click)="toggleMenu()"
+    >
+    </i>
   </div>
+
+  <div class="header-overlay active" *ngIf="mobileMenuOpen" (click)="closeMenu()"></div>
 </header>
-<!-- End Header -->

@@ -3,111 +3,97 @@
   top: 0;
   left: 0;
   width: 100%;
-  background: white;
+  background: #fff;
   z-index: 1000;
-  padding: 24px 0;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, .06);
 }
 
 .header-container {
   max-width: 1400px;
   margin: auto;
-  padding: 0 40px;
+  padding: 0 35px;
 
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
+
 .logo {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
-
+  gap: 12px;
   text-decoration: none;
-
-  flex: 1;
+  color: inherit;
 }
 
 .logo i {
-  font-size: 40px;
+  font-size: 34px;
 }
 
 .logo h1 {
   margin: 0;
-
-  font-size: 48px;
   font-family: var(--font-secondary);
+  font-size: 38px;
   font-weight: 400;
 }
 
 .navbar {
-  flex: 2;
-
   display: flex;
-  justify-content: center;
+  align-items: center;
 }
 
 .navbar ul {
   display: flex;
   align-items: center;
+  gap: 40px;
 
-  gap: 42px;
-
+  list-style: none;
   margin: 0;
   padding: 0;
-  list-style: none;
 }
 
-.navbar a {
-  text-decoration: none;
-
-  color: #111;
-
-  font-size: 15px;
-
-  letter-spacing: 2px;
-
-  text-transform: uppercase;
-
-  transition: 0.3s;
-}
-
-.navbar a:hover {
-  color: #b8b8b8;
-}
-.header-social-links {
-  flex: 1;
-
-  display: flex;
-
-  justify-content: flex-end;
-
-  gap: 22px;
-}
-
-.header-social-links a {
-  font-size: 28px;
-
-  color: #111;
-
-  transition: 0.3s;
-}
-
-.header-social-links a:hover {
-  color: #b8b8b8;
-}
-
-.dropdown {
+.navbar li {
   position: relative;
 }
 
+.navbar a {
+  cursor: pointer;
+
+  text-decoration: none;
+  color: #222;
+
+  font-size: 15px;
+  font-weight: 500;
+
+  text-transform: uppercase;
+  letter-spacing: 1px;
+
+  transition: .25s;
+}
+
+.navbar a:hover {
+  color: #7b7b7b;
+}
+
+.dropdown-indicator {
+  margin-left: 6px;
+}
+
 .dropdown ul {
+
   position: absolute;
 
-  top: 45px;
-
+  top: calc(100% + 20px);
   left: 0;
 
-  min-width: 220px;
+  width: 250px;
+
+  background: white;
+
+  border-radius: 10px;
+
+  padding: 12px 0;
 
   display: none;
 
@@ -115,37 +101,508 @@
 
   gap: 0;
 
-  background: white;
+  box-shadow: 0 15px 35px rgba(0,0,0,.10);
 
-  padding: 15px 0;
-
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
 }
 
 .dropdown:hover ul {
+
   display: flex;
-}
-.dropdown ul li {
-  width: 100%;
+
 }
 
-.dropdown ul a {
-  padding: 12px 20px;
+.dropdown ul li{
+
+    width:100%;
+
+}
+
+.dropdown ul a{
+
+    display:block;
+
+    padding:12px 22px;
+
+    text-transform:none;
+
+    letter-spacing:0;
+
+    font-size:15px;
+
+}
+
+.dropdown ul a:hover{
+
+    background:#f5f5f5;
+
+}
+
+.header-social-links{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+}
+
+.header-social-links a{
+
+    color:#222;
+
+    font-size:24px;
+
+    transition:.3s;
+
+}
+
+.header-social-links a:hover{
+
+    color:#888;
+
+}
+
+.mobile-nav-toggle{
+
+    display:none;
+
+    font-size:34px;
+
+    cursor:pointer;
+
+}
+
+@media (max-width:1279px){
+
+  .header{
+
+    padding:16px 0;
+
+  }
+
+  .header-container{
+
+    padding:0 20px;
+
+  }
+
+  .logo h1{
+
+    font-size:28px;
+
+  }
+
+  .logo i{
+
+    font-size:28px;
+
+  }
+
+  .header-social-links{
+
+    display:none;
+
+  }
+
+  .mobile-nav-toggle{
+
+    display:block;
+
+    z-index:2002;
+
+    color:#222;
+
+  }
+
+  .navbar{
+
+    position:fixed;
+
+    top:0;
+
+    right:-100%;
+
+    width:320px;
+
+    max-width:85vw;
+
+    height:100vh;
+
+    background:#fff;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:flex-start;
+
+    padding:90px 25px 40px;
+
+    transition:.35s ease;
+
+    box-shadow:-10px 0 40px rgba(0,0,0,.12);
+
+    overflow-y:auto;
+
+    z-index:2000;
+
+  }
+
+  .navbar.mobile-active{
+
+    right:0;
+
+  }
+
+  .navbar ul{
+
+    width:100%;
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+    gap:0;
+
+  }
+
+  .navbar li{
+
+    width:100%;
+
+  }
+
+  .navbar>ul>li>a{
+
+    display:block;
+
+    width:100%;
+
+    padding:16px 0;
+
+    border-bottom:1px solid #efefef;
+
+    font-size:16px;
+
+  }
+
+  .dropdown{
+
+    width:100%;
+
+  }
+
+  .dropdown>a{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+  }
+
+  .dropdown ul{
+
+    position:static;
+
+    display:flex;
+
+    width:100%;
+
+    max-height:0;
+
+    overflow:hidden;
+
+    padding:0;
+
+    margin:0;
+
+    box-shadow:none;
+
+    background:#fafafa;
+
+    border-radius:8px;
+
+    transition:max-height .35s ease;
+
+  }
+
+  .dropdown.open ul{
+
+    max-height:500px;
+
+    padding:10px 0;
+
+  }
+
+  .dropdown ul a{
+
+    padding:12px 18px;
+
+    font-size:15px;
+
+    border-bottom:none;
+
+  }
+
+}
+/* ===========================
+   Overlay oscuro
+=========================== */
+
+.header-overlay{
+
+  position:fixed;
+
+  inset:0;
+
+  background:rgba(0,0,0,.45);
+
+  opacity:0;
+
+  visibility:hidden;
+
+  transition:.35s;
+
+  z-index:1999;
+
+}
+
+.header-overlay.active{
+
+  opacity:1;
+
+  visibility:visible;
+
+}
+
+
+/* ===========================
+   Animaciones
+=========================== */
+
+.navbar li{
+
+  transition:.25s;
+
+}
+
+.navbar a{
+
+  transition:color .25s, padding-left .25s;
+
+}
+
+.navbar a:hover{
+
+  padding-left:4px;
+
+}
+
+
+/* ===========================
+   Scroll del menú
+=========================== */
+
+.navbar::-webkit-scrollbar{
+
+  width:6px;
+
+}
+
+.navbar::-webkit-scrollbar-thumb{
+
+  background:#d5d5d5;
+
+  border-radius:20px;
+
+}
+
+
+/* ===========================
+   Móviles pequeños
+=========================== */
+
+@media (max-width:768px){
+
+  .header{
+
+    padding:14px 0;
+
+  }
+
+  .header-container{
+
+    padding:0 15px;
+
+  }
+
+  .logo{
+
+    gap:8px;
+
+  }
+
+  .logo i{
+
+    font-size:24px;
+
+  }
+
+  .logo h1{
+
+    font-size:22px;
+
+  }
+
+  .navbar{
+
+    width:100%;
+
+    max-width:100%;
+
+    right:-100%;
+
+    padding:85px 20px 35px;
+
+  }
+
+  .navbar>ul>li>a{
+
+    font-size:17px;
+
+    padding:18px 0;
+
+  }
+
+  .dropdown ul a{
+
+    font-size:15px;
+
+    padding:14px 16px;
+
+  }
+
+}
+/* ==========================================
+   Estados del menú móvil
+========================================== */
+
+body.menu-open {
+
+  overflow: hidden;
+
+}
+
+.navbar.mobile-active {
+
+  right: 0 !important;
+
+}
+
+.mobile-nav-show {
 
   display: block;
 
-  white-space: nowrap;
 }
-.mobile-nav-toggle {
+
+.mobile-nav-hide {
+
   display: none;
+
 }
 
-@media (max-width: 1279px) {
+body.menu-open .mobile-nav-show {
 
-  .mobile-nav-toggle {
-    display: block;
-    font-size: 30px;
-    cursor: pointer;
+  display: none;
+
+}
+
+body.menu-open .mobile-nav-hide {
+
+  display: block;
+
+}
+
+
+/* ==========================================
+   Dropdown móvil
+========================================== */
+
+@media (max-width:1279px) {
+
+  .dropdown.open>.dropdown-indicator {
+
+    transform: rotate(180deg);
+
+    transition: .3s;
+
   }
+
+  .dropdown-indicator {
+
+    transition: .3s;
+
+  }
+
+  .dropdown.open ul {
+
+    margin-top: 10px;
+
+  }
+
+}
+
+
+/* ==========================================
+   Escritorio
+========================================== */
+
+@media (min-width:1280px) {
+
+  .navbar {
+
+    position: static !important;
+
+    width: auto !important;
+
+    height: auto !important;
+
+    padding: 0 !important;
+
+    background: transparent !important;
+
+    box-shadow: none !important;
+
+    overflow: visible !important;
+
+  }
+
+}
+
+
+/* ==========================================
+   Ajustes finales
+========================================== */
+
+.logo,
+.navbar a,
+.header-social-links a {
+
+  user-select: none;
+
+}
+
+.header {
+
+  transition: box-shadow .3s ease;
+
+}
+
+.header.scrolled {
+
+  box-shadow: 0 6px 18px rgba(0, 0, 0, .08);
 
 }
