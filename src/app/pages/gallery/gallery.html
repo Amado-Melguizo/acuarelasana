@@ -2,8 +2,19 @@
 
 <app-header></app-header>
 
-<app-gallery-hero [title]="section?.title ?? ''" [description]="section?.description ?? ''">
-</app-gallery-hero>
+<app-hero
+
+tag="Colección"
+
+title="Galería"
+
+subtitle="Descubre mis acuarelas"
+
+description="Una colección de obras inspiradas en la naturaleza, el mar y la belleza de los pequeños detalles."
+
+image="assets/images/gallery/home/paisaje_1.jpg"
+
+/>
 <main id="main" data-aos="fade" data-aos-delay="1500">
   <app-gallery-filter></app-gallery-filter>
   <app-gallery-page-grid [images]="section?.galleryImages ?? []"> </app-gallery-page-grid>

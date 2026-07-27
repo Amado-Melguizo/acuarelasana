@@ -1,9 +1,19 @@
 <app-preloader [loaded]="!loading"></app-preloader>
 
 <app-header></app-header>
+<app-hero
 
-<app-hero title="Servicios" description="Encarga una obra personalizada realizada en acuarela.">
-</app-hero>
+tag="Servicios"
+
+title="Encargos personalizados"
+
+subtitle="Una acuarela creada para ti"
+
+description="Transformo tus fotografías, recuerdos y momentos especiales en ilustraciones únicas realizadas completamente a mano."
+
+image="assets/images/gallery/home/botanica_2.jpg"
+
+/>
 
 <main>
   <app-services-list (serviceSelected)="onServiceSelected($event)"> </app-services-list>
