@@ -2,7 +2,7 @@ import { bootstrapApplication } from '@angular/platform-browser';
 import { appConfig } from './app/app.config';
 import { App } from './app/app';
 import emailjs from '@emailjs/browser';
-import { environment } from './enviroment/enviroment';
+import { environment } from './environments/environment';
 
 emailjs.init({
   publicKey: environment.emailjs.publicKey

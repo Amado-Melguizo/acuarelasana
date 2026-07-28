@@ -1,0 +1,64 @@
+<div class="artwork-form">
+  <h2>
+    {{ artwork ? 'Editar obra' : 'Nueva obra' }}
+  </h2>
+  <form [formGroup]="form">
+    <div class="form-group">
+      <label>Título</label>
+
+      <input type="text" formControlName="title" placeholder="Ej. Atardecer en la playa" />
+    </div>
+
+    <div class="form-group">
+      <label>Precio (€)</label>
+
+      <input type="number" formControlName="price" />
+    </div>
+
+    <div class="form-group">
+      <label>Categoría</label>
+
+      <select formControlName="category">
+        <option value="">Seleccionar...</option>
+        <option value="Paisajes">Paisajes</option>
+        <option value="Botánica">Botánica</option>
+        <option value="Animales">Animales</option>
+        <option value="Veleros">Veleros</option>
+        <option value="Playa">Playa</option>
+        <option value="Otros">Otros</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>Estilo</label>
+
+      <input type="text" formControlName="style" placeholder="Ej. Acuarela" />
+    </div>
+
+    <div class="form-group">
+      <label>Descripción</label>
+
+      <textarea rows="5" formControlName="description"> </textarea>
+    </div>
+
+    <div class="form-group">
+      <label>Imagen</label>
+
+      <input type="file" accept="image/*" (change)="onFileSelected($event)" />
+    </div>
+
+    @if (preview) {
+      <div class="preview">
+        <img [src]="preview" alt="Vista previa" />
+      </div>
+    }
+
+    <button type="button" (click)="saveArtwork()" [disabled]="loading">
+      @if (loading) {
+        Guardando...
+      } @else {
+        {{ artwork ? 'Actualizar obra' : 'Guardar obra' }}
+      }
+    </button>
+  </form>
+</div>

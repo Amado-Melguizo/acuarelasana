@@ -1,0 +1,51 @@
+.artwork-form {
+  background: #fff;
+  border-radius: 20px;
+  padding: 28px;
+  box-shadow: 0 8px 24px rgba(0,0,0,.05);
+  border: 1px solid #f1f1f1;
+  position: sticky;
+  top: 120px;
+}
+
+.artwork-form h2 {
+  margin-bottom: 24px;
+  font-size: 2rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+input,
+select,
+textarea {
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 12px 14px;
+  font-size: 1rem;
+}
+
+button {
+  width: 100%;
+  border: none;
+  border-radius: 12px;
+  padding: 14px;
+  background: #7c98d8;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #6b86c7;
+}
+
+.preview img {
+  width: 100%;
+  border-radius: 16px;
+  margin-top: 12px;
+}

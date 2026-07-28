@@ -58,13 +58,44 @@
     </nav>
 
     <div class="header-social-links desktop-social">
-      <a href="https://es.wallapop.com/app/user/anam-76231494-08z82pdrw8z3/published">
+      <a
+        href="https://es.wallapop.com/app/user/anam-76231494-08z82pdrw8z3/published"
+        target="_blank"
+      >
         <i class="bi bi-cart"></i>
       </a>
 
-      <a href="https://www.instagram.com/a.m.art.inez/">
+      <a href="https://www.instagram.com/a.m.art.inez/" target="_blank">
         <i class="bi bi-instagram"></i>
       </a>
+
+      <div class="user-menu">
+        @if (!isLogged()) {
+          <button type="button" class="user-btn" (click)="login()">
+            <i class="bi bi-person-circle"></i>
+          </button>
+        } @else {
+          <button type="button" class="user-btn" (click)="toggleUserMenu()">
+            <i class="bi bi-person-circle"></i>
+          </button>
+
+          @if (userMenuOpen) {
+            <div class="user-dropdown">
+
+              <button type="button" routerLink="/admin" (click)="closeUserMenu()">
+                  <i class="bi bi-speedometer2"></i>
+                  Panel de admin
+
+              </button>
+              <button type="button" (click)="logout()">
+                <i class="bi bi-box-arrow-right"></i>
+
+                Cerrar sesión
+              </button>
+            </div>
+          }
+        }
+      </div>
     </div>
 
     <i
