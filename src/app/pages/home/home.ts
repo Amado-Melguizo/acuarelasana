@@ -18,8 +18,8 @@ import { Preloader } from '../../layouts/components/preloader/preloader';
     GalleryGridComponent,
     Hero,
     Header,
-    Preloader
-  ],
+    Preloader,
+],
   templateUrl: './home.html',
   styleUrl: './home.scss'
 })
@@ -27,7 +27,7 @@ export class Home implements OnInit {
 
   loading = true;
 
-  constructor(private cdr: ChangeDetectorRef) {}
+  constructor(private readonly cdr: ChangeDetectorRef) {}
 
   ngOnInit(): void {
 
