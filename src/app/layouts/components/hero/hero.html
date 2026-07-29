@@ -1,67 +1,41 @@
-<br><br><br><br><br><section class="hero">
+<section class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-text">
+        <span class="hero-tag">
+          {{ tag }}
+        </span>
 
-    <div class="container">
+        <h1>
+          {{ title }}
+        </h1>
 
-        <div class="hero-content">
+        <h2>
+          {{ subtitle }}
+        </h2>
 
-            <div class="hero-text">
+        <p>
+          {{ description }}
+        </p>
 
-                <span class="hero-tag">
-                    {{ tag }}
-                </span>
+        <div class="hero-actions">
+          @if (primaryButton) {
+            <a [routerLink]="primaryLink" class="btn btn-primary">
+              {{ primaryButton }}
+            </a>
+          }
 
-                <h1>
-
-                    {{ title }}
-
-                </h1>
-
-                <h2>
-
-                    {{ subtitle }}
-
-                </h2>
-
-                <p>
-
-                    {{ description }}
-
-                </p>
-
-                <div class="hero-actions">
-
-                    <a
-                        *ngIf="primaryButton"
-                        [routerLink]="primaryLink"
-                        class="btn btn-primary">
-
-                        {{ primaryButton }}
-
-                    </a>
-
-                    <a
-                        *ngIf="secondaryButton"
-                        [routerLink]="secondaryLink"
-                        class="btn btn-outline">
-
-                        {{ secondaryButton }}
-
-                    </a>
-
-                </div>
-
-            </div>
-
-            <div class="hero-image">
-
-                <img
-                    [src]="image"
-                    [alt]="title">
-
-            </div>
-
+          @if (secondaryButton) {
+            <a [routerLink]="secondaryLink" class="btn btn-outline">
+              {{ secondaryButton }}
+            </a>
+          }
         </div>
+      </div>
 
+      <div class="hero-image">
+        <img [src]="image" [alt]="title" />
+      </div>
     </div>
-
+  </div>
 </section>

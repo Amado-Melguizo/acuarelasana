@@ -8,7 +8,7 @@
     <nav class="navbar" [class.mobile-active]="mobileMenuOpen">
       <ul>
         <li>
-          <a routerLink="/" (click)="closeMenu()">Home</a>
+          <a routerLink="" (click)="closeMenu()">Home</a>
         </li>
 
         <li>
@@ -70,30 +70,22 @@
       </a>
 
       <div class="user-menu">
-        @if (!isLogged()) {
-          <button type="button" class="user-btn" (click)="login()">
-            <i class="bi bi-person-circle"></i>
-          </button>
-        } @else {
-          <button type="button" class="user-btn" (click)="toggleUserMenu()">
-            <i class="bi bi-person-circle"></i>
-          </button>
+        <button type="button" class="user-btn" (click)="onUserClick()">
+          <i class="bi bi-person-circle"></i>
+        </button>
 
-          @if (userMenuOpen) {
-            <div class="user-dropdown">
+        @if (logged && userMenuOpen) {
+          <div class="user-dropdown">
+            <button type="button" routerLink="/admin" (click)="closeUserMenu()">
+              <i class="bi bi-speedometer2"></i>
+              Panel de admin
+            </button>
 
-              <button type="button" routerLink="/admin" (click)="closeUserMenu()">
-                  <i class="bi bi-speedometer2"></i>
-                  Panel de admin
-
-              </button>
-              <button type="button" (click)="logout()">
-                <i class="bi bi-box-arrow-right"></i>
-
-                Cerrar sesión
-              </button>
-            </div>
-          }
+            <button type="button" (click)="logout()">
+              <i class="bi bi-box-arrow-right"></i>
+              Cerrar sesión
+            </button>
+          </div>
         }
       </div>
     </div>
