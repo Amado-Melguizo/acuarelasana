@@ -2,10 +2,11 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { GalleryImage } from '../../../../shared/interfaces/gallery-section.interface';
 import { Router } from '@angular/router';
 import { RequestService } from '../../../../core/services/request.service';
+import { ProtectedImageComponent } from "../../../../shared/components/protected-image-component/protected-image-component";
 
 @Component({
   selector: 'app-gallery-card',
-  imports: [],
+  imports: [ProtectedImageComponent],
   templateUrl: './gallery-card.html',
   styleUrl: './gallery-card.scss',
 })

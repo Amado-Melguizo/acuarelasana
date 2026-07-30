@@ -1,5 +1,11 @@
 <div class="gallery-card">
-  <img [src]="image.src" [alt]="image.alt" class="gallery-image" />
+  <app-protected-image
+    [src]="image.src"
+    [watermark]="'www.anamacuarelas.com'"
+    [alt]="image.alt"
+    class="gallery-image"
+  >
+  </app-protected-image>
 
   <div class="gallery-overlay">
     <div class="gallery-info">

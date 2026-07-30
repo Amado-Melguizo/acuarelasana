@@ -9,10 +9,11 @@ import { RequestForm } from "../../features/services/components/request-form/req
 import { Faq } from "../../features/services/components/faq/faq";
 import { Service } from '../../features/services/models/service.model';
 import { ServicesList } from '../../features/services/components/services-list/services-list';
+import { ProcessTimeline } from "../../features/services/components/process-timeline/process-timeline";
 
 @Component({
   selector: 'app-services',
-  imports: [Preloader, Header, Footer, ScrollTop,ServicesList, Hero , PriceGuide, RequestForm, Faq],
+  imports: [Preloader, Header, Footer, ScrollTop, ServicesList, Hero, PriceGuide, RequestForm, Faq, ProcessTimeline],
   templateUrl: './services.html',
   styleUrl: './services.scss',
 })

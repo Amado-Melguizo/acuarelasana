@@ -1,0 +1,52 @@
+<section class="process">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <span>Proceso</span>
+
+            <h2>¿Cómo funciona un encargo?</h2>
+
+            <p>
+                Desde la fotografía hasta la entrega final.
+                Todo el proceso es sencillo y totalmente personalizado.
+            </p>
+
+        </div>
+
+        <div class="timeline">
+
+            @for(step of steps; track step.number){
+
+            <div class="step">
+
+                <div class="circle">
+
+                    <i class="bi {{step.icon}}"></i>
+
+                    <span>{{step.number}}</span>
+
+                </div>
+
+                <h3>
+
+                    {{step.title}}
+
+                </h3>
+
+                <p>
+
+                    {{step.description}}
+
+                </p>
+
+            </div>
+
+            }
+
+        </div>
+
+    </div>
+
+</section>

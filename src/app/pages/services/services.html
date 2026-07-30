@@ -14,12 +14,19 @@
 />
 
 <main>
-  <app-services-list (serviceSelected)="onServiceSelected($event)"> </app-services-list>
-  <app-price-guide></app-price-guide>
 
-  <app-request-form></app-request-form>
+    <app-services-list
+        (serviceSelected)="onServiceSelected($event)">
+    </app-services-list>
 
-  <app-faq></app-faq>
+    <app-process-timeline></app-process-timeline>
+
+    <app-price-guide></app-price-guide>
+
+    <app-request-form></app-request-form>
+
+    <app-faq></app-faq>
+
 </main>
 
 <app-footer></app-footer>

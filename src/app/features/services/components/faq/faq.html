@@ -2,54 +2,69 @@
 
     <div class="container">
 
-        <div class="section-header text-center">
+        <div class="section-header">
+
+            <span>FAQ</span>
 
             <h2>Preguntas frecuentes</h2>
 
             <p>
 
-                Estas son algunas de las dudas más habituales antes de realizar un encargo.
+                Si todavía tienes alguna duda, aquí encontrarás respuesta a las consultas
+                más habituales antes de realizar un encargo.
 
             </p>
 
         </div>
 
-        @for(question of questions; track question.question){
+        <div class="faq-container">
 
-        <div class="faq-item">
+            @for(question of questions; track question.question){
 
-            <button
-                type="button"
-                class="faq-header"
-                (click)="toggle(question)">
+            <article class="faq-item">
 
-                <span>
+                <button
+                    class="faq-header"
+                    type="button"
+                    (click)="toggle(question)">
 
-                    {{question.question}}
+                    <span>
 
-                </span>
+                        {{question.question}}
 
-                <i
-                    class="bi"
-                    [class.bi-chevron-down]="!question.open"
-                    [class.bi-chevron-up]="question.open">
-                </i>
+                    </span>
 
-            </button>
+                    <div class="icon">
 
-            @if(question.open){
+                        <i
+                            class="bi"
+                            [class.bi-plus-lg]="!question.open"
+                            [class.bi-dash-lg]="question.open">
+                        </i>
 
-            <div class="faq-body">
+                    </div>
 
-                {{question.answer}}
+                </button>
 
-            </div>
+                @if(question.open){
+
+                <div class="faq-body">
+
+                    <p>
+
+                        {{question.answer}}
+
+                    </p>
+
+                </div>
+
+                }
+
+            </article>
 
             }
 
         </div>
-
-        }
 
     </div>
 

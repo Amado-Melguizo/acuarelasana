@@ -14,4 +14,8 @@ export interface Service {
 
   startingPrice: number;
 
+  badge?: string;
+
+  features?: string[];
+
 }

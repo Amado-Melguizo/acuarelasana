@@ -9,6 +9,12 @@ interface PriceGuideI {
 
   price: string;
 
+  icon: string;
+
+  features: string[];
+
+  popular?: boolean;
+
 }
 
 @Component({
@@ -24,30 +30,51 @@ export class PriceGuide {
 
     {
       title: 'Retrato personalizado',
-      description:
-        'Retrato realizado a mano a partir de una fotografía.',
-      price: 'Desde 45 €'
+      description: 'Ideal para parejas, familiares o retratos individuales.',
+      price: 'Desde 45 €',
+      icon: 'bi-person-circle',
+      features: [
+        'Pintado completamente a mano',
+        'Papel profesional',
+        'Perfecto para regalar'
+      ],
+      popular: true
     },
 
     {
       title: 'Acuarela personalizada',
-      description:
-        'Obra completamente diseñada según la idea del cliente.',
-      price: 'Desde 60 €'
+      description: 'Obras creadas exclusivamente para ti.',
+      price: 'Desde 60 €',
+      icon: 'bi-palette',
+      features: [
+        'Diseño exclusivo',
+        'Colores de alta calidad',
+        'Asesoramiento personalizado'
+      ]
     },
 
     {
-      title: 'Acuarela desde fotografía',
-      description:
-        'Conversión artística de una fotografía.',
-      price: 'Desde 50 €'
+      title: 'Desde fotografía',
+      description: 'Transforma un recuerdo en una obra única.',
+      price: 'Desde 50 €',
+      icon: 'bi-image',
+      features: [
+        'Máximo detalle',
+        'Manteniendo la esencia',
+        'Ideal para recuerdos'
+      ]
     },
 
     {
-      title: 'Dibujo a carboncillo',
-      description:
-        'Retratos y composiciones en carboncillo.',
-      price: 'Desde 40 €'
+      title: 'Carboncillo',
+      description: 'Retratos clásicos en blanco y negro.',
+      price: 'Desde 40 €',
+      icon: 'bi-pencil',
+      features: [
+        'Técnica tradicional',
+        'Gran contraste',
+        'Acabado elegante'
+      ]
     }
 
   ];

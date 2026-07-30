@@ -1,6 +1,8 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
+
 import { Service } from '../../models/service.model';
+import { SERVICES } from '../../data/services.data';
 
 @Component({
   selector: 'app-services-list',
@@ -10,82 +12,27 @@ import { Service } from '../../models/service.model';
   styleUrl: './services-list.scss'
 })
 export class ServicesList {
-@Output()
-serviceSelected = new EventEmitter<Service>();
 
-selectService(service: Service) {
-  this.serviceSelected.emit(service);
-}
-  readonly services: Service[] = [
+  @Output()
+  serviceSelected = new EventEmitter<Service>();
 
-  {
-    id: 'portrait',
+  readonly services = SERVICES;
 
-    title: 'Retratos personalizados',
+  selectService(service: Service){
 
-    subtitle: 'Retratos únicos',
+      this.serviceSelected.emit(service);
 
-    description:
-      'Retratos realizados completamente a mano a partir de una fotografía.',
+      setTimeout(()=>{
 
-    icon: 'bi-person-square',
+          document
+            .getElementById('request-form')
+            ?.scrollIntoView({
+                behavior:'smooth',
+                block:'start'
+            });
 
-    image: '',
+      },100);
 
-    startingPrice: 60
-  },
-
-  {
-    id: 'watercolor',
-
-    title: 'Acuarelas personalizadas',
-
-    subtitle: 'Obras únicas',
-
-    description:
-      'Ilustraciones originales creadas según la idea del cliente.',
-
-    icon: 'bi-palette',
-
-    image: '',
-
-    startingPrice: 45
-  },
-
-  {
-    id: 'photo',
-
-    title: 'Acuarela desde fotografía',
-
-    subtitle: 'Convierte un recuerdo en arte',
-
-    description:
-      'Transforma una fotografía especial en una acuarela única.',
-
-    icon: 'bi-image',
-
-    image: '',
-
-    startingPrice: 55
-  },
-
-  {
-    id: 'charcoal',
-
-    title: 'Dibujo a carboncillo',
-
-    subtitle: 'Carboncillo tradicional',
-
-    description:
-      'Obras realizadas completamente a mano en carboncillo.',
-
-    icon: 'bi-pencil',
-
-    image: '',
-
-    startingPrice: 50
   }
-
-];
 
 }

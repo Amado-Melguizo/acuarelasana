@@ -2,58 +2,100 @@
 
     <div class="container">
 
-        <div class="section-header text-center">
+        <div class="section-header">
 
-            <h2>Guía orientativa de precios</h2>
+            <span>Precios</span>
+
+            <h2>Guía orientativa</h2>
 
             <p>
 
-                Cada obra se realiza completamente a mano. El precio final puede
-                variar según la complejidad y los detalles solicitados.
+                Cada obra se realiza de forma completamente artesanal.
+                El presupuesto final dependerá del tamaño, nivel de detalle
+                y características de cada encargo.
 
             </p>
 
         </div>
 
-        <div class="row">
+        <div class="price-grid">
 
             @for(price of prices; track price.title){
 
-            <div class="col-lg-6 mb-4">
+            <article class="price-card">
 
-                <div class="price-card">
+                @if(price.popular){
 
-                    <h3>{{price.title}}</h3>
+                <div class="badge">
 
-                    <p>{{price.description}}</p>
-
-                    <span>{{price.price}}</span>
+                    Más solicitado
 
                 </div>
 
-            </div>
+                }
+
+                <div class="icon">
+
+                    <i class="bi {{price.icon}}"></i>
+
+                </div>
+
+                <h3>
+
+                    {{price.title}}
+
+                </h3>
+
+                <p>
+
+                    {{price.description}}
+
+                </p>
+
+                <ul>
+
+                    @for(feature of price.features; track feature){
+
+                    <li>
+
+                        <i class="bi bi-check-circle-fill"></i>
+
+                        {{feature}}
+
+                    </li>
+
+                    }
+
+                </ul>
+
+                <div class="price">
+
+                    {{price.price}}
+
+                </div>
+
+            </article>
 
             }
 
         </div>
 
-        <div class="price-info">
+        <div class="price-note">
 
-            <h4>¿Qué puede influir en el precio?</h4>
+            <i class="bi bi-info-circle"></i>
 
-            <ul>
+            <div>
 
-                <li>Tamaño del cuadro.</li>
+                <h4>Presupuesto personalizado</h4>
 
-                <li>Número de personas o animales.</li>
+                <p>
 
-                <li>Nivel de detalle.</li>
+                    El precio puede variar según el tamaño, número de personas o
+                    animales, nivel de detalle, materiales utilizados y plazo de entrega.
 
-                <li>Materiales utilizados.</li>
+                </p>
 
-                <li>Fecha de entrega.</li>
-
-            </ul>
+            </div>
 
         </div>
 

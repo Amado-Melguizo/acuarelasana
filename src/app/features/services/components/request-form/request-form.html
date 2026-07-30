@@ -1,65 +1,38 @@
-<section class="service-request">
-
+<section id="request-form" class="request-form" class="service-request">
   <div class="container">
-
     <div class="section-header text-center">
-
       <h2>Solicitar un encargo</h2>
 
       <p>
-        Completa este formulario y nos pondremos en contacto contigo para
-        preparar tu obra personalizada.
+        Completa este formulario y nos pondremos en contacto contigo para preparar tu obra
+        personalizada.
       </p>
-
     </div>
 
-    <form
-      [formGroup]="form"
-      (ngSubmit)="submit()">
-
+    <form [formGroup]="form" (ngSubmit)="submit()">
       <div class="row">
-
         <div class="col-md-6 mb-3">
-
           <label>Nombre *</label>
 
-          <input
-            type="text"
-            class="form-control"
-            formControlName="name">
-
+          <input type="text" class="form-control" formControlName="name" />
         </div>
 
         <div class="col-md-6 mb-3">
-
           <label>Correo electrónico *</label>
 
-          <input
-            type="email"
-            class="form-control"
-            formControlName="email">
-
+          <input type="email" class="form-control" formControlName="email" />
         </div>
 
         <div class="col-md-6 mb-3">
-
           <label>Teléfono</label>
 
-          <input
-            type="text"
-            class="form-control"
-            formControlName="phone">
-
+          <input type="text" class="form-control" formControlName="phone" />
         </div>
 
         <div class="col-md-6 mb-3">
-
           <label>Tipo de solicitud *</label>
 
-          <select
-            class="form-select"
-            formControlName="service">
-
+          <select class="form-select" formControlName="service">
             <option value="">Seleccionar...</option>
 
             <option>Retrato</option>
@@ -71,87 +44,47 @@
             <option>Dibujo a carboncillo</option>
 
             <option>Información sobre una obra</option>
-
           </select>
-
         </div>
 
         <div class="col-12 mb-3">
-
           <label>Nombre del cuadro (si aplica)</label>
 
-          <input
-            type="text"
-            class="form-control"
-            formControlName="paintingTitle">
-
+          <input type="text" class="form-control" formControlName="paintingTitle" />
         </div>
 
         <div class="col-12 mb-3">
-
           <label>Descripción *</label>
 
-          <textarea
-            rows="6"
-            class="form-control"
-            formControlName="description">
-          </textarea>
-
+          <textarea rows="6" class="form-control" formControlName="description"> </textarea>
         </div>
 
         <div class="col-md-4 mb-3">
-
           <label>Estilo</label>
 
-          <input
-            class="form-control"
-            formControlName="style">
-
+          <input class="form-control" formControlName="style" />
         </div>
 
         <div class="col-md-4 mb-3">
-
           <label>Tamaño</label>
 
-          <input
-            class="form-control"
-            formControlName="size">
-
+          <input class="form-control" formControlName="size" />
         </div>
 
         <div class="col-md-4 mb-3">
-
           <label>Presupuesto (€)</label>
 
-          <input
-            class="form-control"
-            formControlName="budget">
-
+          <input class="form-control" formControlName="budget" />
         </div>
 
         <div class="col-md-6 mb-4">
-
           <label>Fecha deseada</label>
 
-          <input
-            type="date"
-            class="form-control"
-            formControlName="deliveryDate">
-
+          <input type="date" class="form-control" formControlName="deliveryDate" />
         </div>
-
       </div>
 
-      <button
-        class="btn btn-primary"
-        type="submit">
-
-        Enviar solicitud
-
-      </button>
-
+      <button class="btn btn-primary" type="submit">Enviar solicitud</button>
     </form>
-
   </div>
-
 </section>
