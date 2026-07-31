@@ -1,6 +1,8 @@
 <app-preloader [loaded]="!loading"></app-preloader>
 
 <app-header></app-header>
+<main class="page-content">
+
 <app-hero
   tag="Servicios"
   title="Encargos personalizados"
@@ -14,19 +16,15 @@
 />
 
 <main>
+  <app-services-list (serviceSelected)="onServiceSelected($event)"> </app-services-list>
 
-    <app-services-list
-        (serviceSelected)="onServiceSelected($event)">
-    </app-services-list>
+  <app-process-timeline></app-process-timeline>
 
-    <app-process-timeline></app-process-timeline>
+  <app-price-guide></app-price-guide>
 
-    <app-price-guide></app-price-guide>
+  <app-request-form></app-request-form>
 
-    <app-request-form></app-request-form>
-
-    <app-faq></app-faq>
-
+  <app-faq></app-faq>
 </main>
 
 <app-footer></app-footer>

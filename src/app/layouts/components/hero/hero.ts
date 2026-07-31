@@ -1,9 +1,10 @@
 import { Component, Input } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { ProtectedImageComponent } from "../../../shared/components/protected-image-component/protected-image-component";
 
 @Component({
   selector: 'app-hero',
-  imports: [RouterLink],
+  imports: [RouterLink, ProtectedImageComponent],
   templateUrl: './hero.html',
   styleUrl: './hero.scss',
 })

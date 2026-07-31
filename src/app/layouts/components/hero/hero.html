@@ -34,7 +34,12 @@
       </div>
 
       <div class="hero-image">
-        <img [src]="image" [alt]="title" />
+        <app-protected-image
+          [src]="image"
+          [watermark]="'a.m.art.inez'"
+          [alt]="title"
+          class="gallery-image"
+        ></app-protected-image>
       </div>
     </div>
   </div>

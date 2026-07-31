@@ -61,3 +61,48 @@ hr{
     margin:90px 0;
 
 }
+
+.page-header {
+  margin-top: 40px;
+}
+
+.cta-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 14px 32px;
+
+  background: white;
+  color: black;
+
+  border: 1px solid black;
+  border-radius: 50px;
+
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: .5px;
+
+  text-decoration: none;
+
+  transition: all .3s ease;
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, .12);
+}
+
+.cta-btn:hover {
+  background: transparent;
+
+  transform: translateY(-3px);
+
+  box-shadow: 0 12px 25px rgba(0, 0, 0, .18);
+}
+
+.cta-btn:active {
+  transform: translateY(-1px);
+}
+
+.cta-btn:focus-visible {
+  outline: 3px solid rgba(0, 0, 0, .15);
+  outline-offset: 4px;
+}

@@ -1,3 +1,6 @@
+.page-content {
+  padding-top: 95px;
+}
 .about-hero{
 
     padding:140px 0 90px;
@@ -177,21 +180,29 @@
     line-height:1.8;
 
 }
-
-.btn-primary{
-
-    display:inline-block;
-    padding:15px 35px;
-    border-radius:40px;
-    text-decoration:none;
-    transition:.3s;
-
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: .3s;
+  font-weight: 500;
 }
 
-.btn-primary:hover{
+.btn-primary {
+  background: #222;
+  color: #fff;
+}
 
-    transform:translateY(-2px);
+.btn-outline {
+  border: 1px solid #222;
+  color: #222;
+}
 
+.btn:hover {
+  transform: translateY(-2px);
 }
 
 /* -------------------------------- */

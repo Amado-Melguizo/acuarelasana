@@ -1,38 +1,39 @@
-.lightbox{
+.lightbox {
+  position: fixed;
+  inset: 0;
 
-    position:fixed;
-    inset:0;
+  background: rgba(0, 0, 0, 0.85);
 
-    background:rgba(0,0,0,.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
-    z-index:9999;
-
+  z-index: 9999;
 }
 
-.lightbox img{
-
-    max-width:90%;
-    max-height:90%;
-    border-radius:8px;
-
+.lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 8px;
 }
 
-.close{
+.close {
+  position: absolute;
+  top: 30px;
+  right: 30px;
 
-    position:absolute;
-    top:30px;
-    right:30px;
+  font-size: 40px;
 
-    font-size:40px;
+  background: none;
+  border: none;
+  color: white;
 
-    background:none;
-    border:none;
-    color:white;
+  cursor: pointer;
+}
+.lightbox app-protected-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    cursor:pointer;
-
+  width: min(75vw, 600px);
 }
