@@ -1,11 +1,22 @@
+:host {
+  display: block;
+  width: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 .artwork-form {
   background: #fff;
   border-radius: 20px;
   padding: 28px;
-  box-shadow: 0 8px 24px rgba(0,0,0,.05);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
   border: 1px solid #f1f1f1;
   position: sticky;
   top: 120px;
+  width: 100%;
 }
 
 .artwork-form h2 {
@@ -27,15 +38,17 @@ textarea {
   border-radius: 12px;
   padding: 12px 14px;
   font-size: 1rem;
+  width: 100%;
+  max-width: 100%;
 }
 
 button {
   width: 100%;
+  max-width: 100%;
   border: none;
   border-radius: 12px;
   padding: 14px;
   background: #7c98d8;
-  color: #fff;
   font-weight: 600;
   cursor: pointer;
 }
