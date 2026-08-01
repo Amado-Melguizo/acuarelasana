@@ -19,7 +19,8 @@ export class AuthService {
   private readonly allowedEmails = [
     'amado.melgizo@gmail.com',
     'ana@gmail.com',
-    'lunaysar09@outlook.es'
+    'lunaysar09@outlook.es',
+    'melguizoserrano@gmail.com'
   ];
 
   async login(): Promise<User> {
