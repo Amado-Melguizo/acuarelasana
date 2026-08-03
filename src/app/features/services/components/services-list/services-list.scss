@@ -1,0 +1,283 @@
+.services-list{
+
+    padding:120px 0;
+
+    background:#fff;
+
+}
+
+.section-header{
+
+    text-align:center;
+
+    max-width:760px;
+
+    margin:0 auto 70px;
+
+}
+
+.section-header span{
+
+    color:#be8d47;
+
+    text-transform:uppercase;
+
+    letter-spacing:2px;
+
+    font-weight:700;
+
+}
+
+.section-header h2{
+
+    margin:15px 0;
+
+    font-size:2.8rem;
+
+}
+
+.section-header p{
+
+    color:#666;
+
+    line-height:1.8;
+
+}
+
+.services-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+    gap:35px;
+
+}
+
+.service-card{
+
+    position:relative;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:space-between;
+
+    background:white;
+
+    border-radius:24px;
+
+    padding:40px;
+
+    overflow:hidden;
+
+    border:1px solid rgba(0,0,0,.06);
+
+    transition:.35s;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.05);
+
+}
+
+.service-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 30px 60px rgba(0,0,0,.12);
+
+}
+
+.badge{
+
+    position:absolute;
+
+    top:20px;
+
+    right:20px;
+
+    background:#c98942;
+
+    color:white;
+
+    padding:6px 16px;
+
+    border-radius:50px;
+
+    font-size:.8rem;
+
+    font-weight:600;
+
+}
+
+.icon{
+
+    width:90px;
+
+    height:90px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    margin-bottom:30px;
+
+    background:#faf5ef;
+
+    transition:.35s;
+
+}
+
+.service-card:hover .icon{
+
+    transform:scale(1.08);
+
+}
+
+.icon i{
+
+    font-size:2.2rem;
+
+    color:#c98942;
+
+}
+
+.subtitle{
+
+    color:#c98942;
+
+    font-weight:600;
+
+    letter-spacing:1px;
+
+    text-transform:uppercase;
+
+    font-size:.85rem;
+
+}
+
+.content h3{
+
+    margin:12px 0 20px;
+
+    font-size:1.6rem;
+
+}
+
+.content p{
+
+    color:#666;
+
+    line-height:1.8;
+
+    margin-bottom:25px;
+
+}
+
+.content ul{
+
+    list-style:none;
+
+    padding:0;
+
+    margin:0;
+
+}
+
+.content li{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    margin-bottom:12px;
+
+}
+
+.content li i{
+
+    color:#5fb95f;
+
+}
+
+.footer{
+
+    margin-top:35px;
+
+    padding-top:25px;
+
+    border-top:1px solid rgba(0,0,0,.08);
+
+}
+
+.price{
+
+    margin-bottom:20px;
+
+    color:#666;
+
+}
+
+.price strong{
+
+    display:block;
+
+    font-size:2rem;
+
+    color:#222;
+
+}
+
+.btn-service{
+
+    width:100%;
+
+    border:none;
+
+    background:#c98942;
+
+    color:white;
+
+    border-radius:50px;
+
+    padding:15px;
+
+    font-weight:600;
+
+    transition:.35s;
+
+}
+
+.btn-service:hover{
+
+    background:#b67b34;
+
+}
+
+.btn-service i{
+
+    margin-left:10px;
+
+}
+
+@media(max-width:768px){
+
+.service-card{
+
+padding:30px;
+
+}
+
+.section-header h2{
+
+font-size:2.2rem;
+
+}
+
+}

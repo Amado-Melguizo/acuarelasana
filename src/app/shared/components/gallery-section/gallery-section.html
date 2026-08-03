@@ -1,0 +1,22 @@
+<div class="row gy-4 justify-content-center">
+  <div class="section-header d-flex justify-content-center align-items-center">
+    <p>{{ section.title }}</p>
+  </div>
+  @for (image of section.homeImages; track $index) {
+    <div class="col-xl-3 col-lg-4 col-md-6">
+      <app-gallery-card [image]="image" (open)="openLightbox($event)"> </app-gallery-card>
+    </div>
+  }
+  @if (showLightbox) {
+    <app-gallery-lightbox [image]="selectedImage!" (close)="closeLightbox()">
+    </app-gallery-lightbox>
+  }
+
+  <div
+    class="page-header d-flex align-items-center row justify-content-center col-lg-4 text-center"
+  >
+    <a class="cta-btn" [routerLink]="section.route"> Ver sección completa </a>
+  </div>
+
+  <hr />
+</div>

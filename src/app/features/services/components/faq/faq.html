@@ -1,0 +1,71 @@
+<section class="faq">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <span>FAQ</span>
+
+            <h2>Preguntas frecuentes</h2>
+
+            <p>
+
+                Si todavía tienes alguna duda, aquí encontrarás respuesta a las consultas
+                más habituales antes de realizar un encargo.
+
+            </p>
+
+        </div>
+
+        <div class="faq-container">
+
+            @for(question of questions; track question.question){
+
+            <article class="faq-item">
+
+                <button
+                    class="faq-header"
+                    type="button"
+                    (click)="toggle(question)">
+
+                    <span>
+
+                        {{question.question}}
+
+                    </span>
+
+                    <div class="icon">
+
+                        <i
+                            class="bi"
+                            [class.bi-plus-lg]="!question.open"
+                            [class.bi-dash-lg]="question.open">
+                        </i>
+
+                    </div>
+
+                </button>
+
+                @if(question.open){
+
+                <div class="faq-body">
+
+                    <p>
+
+                        {{question.answer}}
+
+                    </p>
+
+                </div>
+
+                }
+
+            </article>
+
+            }
+
+        </div>
+
+    </div>
+
+</section>

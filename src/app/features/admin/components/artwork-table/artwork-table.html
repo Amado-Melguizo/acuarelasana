@@ -1,0 +1,67 @@
+<section class="table-card">
+  <div class="table-header">
+    <div>
+      <h2>Obras</h2>
+      <p>{{ artworks().length }} obra(s) almacenadas</p>
+    </div>
+
+    <div class="filters">
+      <input type="text" placeholder="Buscar obra..." />
+
+      <select>
+        <option>Más recientes</option>
+        <option>Más antiguas</option>
+        <option>Título A-Z</option>
+        <option>Título Z-A</option>
+        <option>Precio ↑</option>
+        <option>Precio ↓</option>
+      </select>
+    </div>
+  </div>
+
+  @if (loading()) {
+    <div class="empty-state">
+      <p>Cargando obras...</p>
+    </div>
+  } @else if (artworks().length === 0) {
+    <div class="empty-state">
+      <p>No hay obras registradas todavía.</p>
+    </div>
+  } @else {
+    <div class="artwork-list">
+      @for (artwork of artworks(); track artwork.id) {
+        <article class="artwork-row">
+          <div class="artwork-image">
+            <img [src]="artwork.imageUrl" [alt]="artwork.title" />
+          </div>
+
+          <div class="artwork-info">
+            <h3>{{ artwork.title }}</h3>
+            <p>{{ artwork.category }}</p>
+
+            @if (artwork.style) {
+              <span class="style">{{ artwork.style }}</span>
+            }
+          </div>
+
+          <div class="artwork-status">
+            @if (artwork.available) {
+              <span class="badge available">Disponible</span>
+            } @else {
+              <span class="badge sold">Vendida</span>
+            }
+          </div>
+
+          <div class="artwork-price">{{ artwork.price }} €</div>
+
+          <div class="artwork-actions">
+            <button type="button" class="icon-btn" title="Editar" (click)="editArtwork(artwork)">
+              ✏
+            </button>
+            <button type="button" class="icon-btn danger" title="Eliminar">🗑</button>
+          </div>
+        </article>
+      }
+    </div>
+  }
+</section>

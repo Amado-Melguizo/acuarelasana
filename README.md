@@ -1,61 +1,206 @@
-# Acuarelasana
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.19.
+# 🎨 Acuarelasana
 
-## Development server
+<p align="center">
+  <img src="src/assets/images/main-banner.png" alt="Acuarelasana Logo" width="500">
+</p>
 
-To start a local development server, run:
+<p align="center">
+  <strong>Portfolio web for a professional watercolor artist.</strong>
+</p>
+
+<p align="center">
+  Built with Angular 21, designed with performance, responsive design and user experience in mind.
+</p>
+
+---
+
+## 📖 About the project
+
+**Acuarelasana** is a modern web application developed for a professional watercolor artist to showcase her artwork, provide information about commissions, and offer visitors an intuitive and engaging browsing experience.
+
+The project was designed following modern Angular best practices, focusing on:
+
+- Clean architecture
+- Responsive design
+- Performance optimization
+- Accessibility
+- Reusable standalone components
+- Smooth animations
+- SEO-friendly structure
+
+---
+
+## ✨ Features
+
+- 🎨 Artwork gallery
+- 🔍 Lightbox image viewer
+- 🖼️ Protected artwork images
+- 📱 Fully responsive design
+- 💬 Interactive assistant chat
+- ❓ FAQ section
+- 📩 Contact & commission request form
+- 🎭 Custom 404 interactive page
+- ⚡ Lazy loading
+- 🌙 Modern UI with smooth animations
+- 🔒 Firebase Authentication (Admin)
+- ☁️ Cloudinary image management
+- 📦 Firestore integration
+
+---
+
+## 🛠️ Built With
+
+| Technology | Version |
+|------------|----------|
+| Angular | 21 |
+| TypeScript | Latest |
+| SCSS | ✓ |
+| Bootstrap Icons | ✓ |
+| Firebase | ✓ |
+| Firestore | ✓ |
+| Cloudinary | ✓ |
+| Angular Router | ✓ |
+| RxJS | ✓ |
+
+---
+
+## 📂 Project Structure
+
+```
+
+src/
+│
+├── app/
+│   ├── core/
+│   ├── features/
+│   ├── layouts/
+│   ├── shared/
+│   └── pages/
+│
+├── assets/
+│
+└── environments/
+
+````
+
+---
+
+## 🚀 Getting Started
+
+Clone the repository
+
+```bash
+git clone <repository-url>
+````
+
+Navigate to the project
+
+```bash
+cd acuarelasana
+```
+
+Install dependencies
+
+```bash
+npm install
+```
+
+Start the development server
 
 ```bash
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Open your browser at
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
+```
+http://localhost:4200
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+---
 
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
+## 📦 Production Build
 
 ```bash
 ng build
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+The compiled application will be generated inside:
 
-## Running unit tests
+```
+dist/
+```
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+---
+
+## 🧪 Running Tests
+
+Unit tests
 
 ```bash
 ng test
 ```
 
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
+End-to-End tests
 
 ```bash
 ng e2e
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+---
 
-## Additional Resources
+## 📸 Screenshots
+
+> *(Add screenshots of the Home page, Gallery, Services, Admin panel and Contact page here.)*
+
+Example:
+
+```
+docs/
+    home.png
+    gallery.png
+    services.png
+```
+
+Then reference them like:
+
+```md
+![Home](docs/home.png)
+```
+
+---
+
+## 🚀 Future Improvements
+
+* Image search
+* Artwork filtering
+* Online purchases
+* Multi-language support
+* User accounts
+* Favorites
+* Progressive Web App (PWA)
+
+---
+
+## 👨‍💻 Author
+
+**Amado Melguizo Martínez**
+
+Frontend Software Engineer
+
+* Angular
+* TypeScript
+* Java
+* Spring Boot
+
+---
+
+## ⭐ If you like this project
+
+Give it a ⭐ on GitHub!
 
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
 
 Cambio del readme y prueba del copilot
+It helps support the project and motivates future improvements.

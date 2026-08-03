@@ -1,0 +1,32 @@
+<app-preloader [loaded]="!loading"></app-preloader>
+
+<app-header></app-header>
+<main class="page-content">
+
+<app-hero
+  tag="Servicios"
+  title="Encargos personalizados"
+  subtitle="Una acuarela creada para ti"
+  description="Transformo tus fotografías, recuerdos y momentos especiales en ilustraciones únicas realizadas completamente a mano."
+  image="assets/images/gallery/home/botanica_2.jpg"
+  primaryButton="Ver galería"
+  primaryLink="/gallery"
+  secondaryButton="Sobre mi"
+  secondaryLink="/about"
+/>
+
+<main>
+  <app-services-list (serviceSelected)="onServiceSelected($event)"> </app-services-list>
+
+  <app-process-timeline></app-process-timeline>
+
+  <app-price-guide></app-price-guide>
+
+  <app-request-form></app-request-form>
+
+  <app-faq></app-faq>
+</main>
+
+<app-footer></app-footer>
+
+<app-scroll-top></app-scroll-top>

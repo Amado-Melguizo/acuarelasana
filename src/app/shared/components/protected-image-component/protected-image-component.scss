@@ -1,0 +1,44 @@
+:host {
+  display: block;
+  width: 100%;
+}
+
+.protected-container {
+
+  position: relative;
+
+  width: 100%;
+
+  overflow: hidden;
+
+  user-select: none;
+
+  -webkit-user-select: none;
+
+}
+
+.protected-canvas {
+
+  display: block;
+
+  width: 100%;
+
+  height: auto;
+
+  pointer-events: none;
+
+}
+
+.overlay {
+
+  position: absolute;
+
+  inset: 0;
+
+  background: transparent;
+
+  z-index: 5;
+
+  cursor: default;
+
+}

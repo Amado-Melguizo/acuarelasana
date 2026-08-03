@@ -1,0 +1,39 @@
+<div
+  class="painting-card"
+  (mouseenter)="enableBrush()"
+  (mouseleave)="disableBrush()"
+  (mousemove)="moveBrush($event)"
+>
+  <i
+    class="bi bi-brush brush-cursor"
+    [class.active]="brushActive"
+    [style.color]="brushColor"
+    [style.left.px]="cursorX"
+    [style.top.px]="cursorY"
+  >
+  </i>
+
+  <div class="svg-container">
+    <object
+      id="coloring-svg"
+      type="image/svg+xml"
+      data="assets/images/notFound/canary.svg"
+    ></object>
+  </div>
+
+  <div class="palette">
+    @for (color of colors; track color) {
+      <button
+        type="button"
+        class="color"
+        [style.background]="color"
+        [class.active]="selectedColor === color"
+        (click)="selectColor(color)"
+      ></button>
+    }
+  </div>
+
+  <div class="toolbar">
+    <button type="button" class="toolbar-btn" (click)="clear()">🧽 Limpiar dibujo</button>
+  </div>
+</div>

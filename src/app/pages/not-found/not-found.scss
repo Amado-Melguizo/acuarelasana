@@ -1,0 +1,322 @@
+/* ===========================================================
+   NOT FOUND
+=========================================================== */
+
+.not-found {
+  min-height: calc(100vh - 90px);
+
+  display: flex;
+  align-items: center;
+
+  background: #f8f5ef;
+
+  padding: 70px 20px;
+}
+
+/* ===========================================================
+   CONTENEDOR
+=========================================================== */
+
+.container {
+  width: 100%;
+  max-width: 1300px;
+
+  margin: auto;
+}
+
+.not-found-content {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 80px;
+
+  align-items: center;
+}
+
+/* ===========================================================
+   TEXTO
+=========================================================== */
+
+.tag {
+  display: inline-block;
+
+  margin-bottom: 18px;
+
+  font-size: .85rem;
+
+  text-transform: uppercase;
+
+  letter-spacing: 3px;
+
+  color: #9c9c9c;
+}
+
+.not-found h1 {
+  font-size: clamp(2.5rem, 4vw, 4rem);
+
+  line-height: 1.1;
+
+  font-weight: 400;
+
+  color: #222;
+
+  margin-bottom: 24px;
+}
+
+.not-found p {
+  max-width: 560px;
+
+  margin-bottom: 18px;
+
+  color: #666;
+
+  font-size: 1.05rem;
+
+  line-height: 1.8;
+}
+
+/* ===========================================================
+   BOTONES
+=========================================================== */
+
+.actions {
+  display: flex;
+
+  gap: 18px;
+
+  margin-top: 40px;
+
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 14px 28px;
+
+  border: none;
+
+  border-radius: 999px;
+
+  cursor: pointer;
+
+  text-decoration: none;
+
+  font-weight: 500;
+
+  transition: .25s;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+}
+
+.btn-primary {
+  background: #222;
+
+  color: white;
+}
+
+.btn-outline {
+  background: white;
+
+  border: 1px solid #222;
+
+  color: #222;
+}
+
+/* ===========================================================
+   DIBUJO
+=========================================================== */
+
+.not-found-art {
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+}
+
+/* ===========================================================
+   RESPONSIVE
+=========================================================== */
+
+@media (max-width: 992px) {
+
+  .not-found {
+    padding: 50px 20px;
+  }
+
+  .not-found-content {
+
+    grid-template-columns: 1fr;
+
+    gap: 55px;
+  }
+
+  .not-found-text {
+
+    text-align: center;
+
+  }
+
+  .not-found p {
+
+    margin-inline: auto;
+
+  }
+
+  .actions {
+
+    justify-content: center;
+
+  }
+
+}
+
+@media (max-width: 576px) {
+
+  .not-found {
+
+    padding: 35px 15px;
+
+  }
+
+  .actions {
+
+    flex-direction: column;
+
+  }
+
+  .btn {
+
+    width: 100%;
+
+  }
+/* ==========================================================
+   CURSOR PINCEL
+========================================================== */
+
+.paint-cursor {
+
+  position: fixed;
+
+  pointer-events: none;
+
+  z-index: 99999;
+
+  opacity: 0;
+
+  transform: translate(-10px, -10px);
+
+  transition:
+    opacity .2s ease,
+    transform .05s linear;
+
+}
+
+
+.paint-cursor.visible {
+
+  opacity: 1;
+
+}
+
+
+.brush {
+
+  position: relative;
+
+}
+
+
+.brush i {
+
+  display: block;
+
+  font-size: 38px;
+
+  color: #8d5524;
+
+  transform: rotate(-45deg);
+
+}
+
+
+/* Mancha de pintura */
+
+.brush::after {
+
+  content: "";
+
+  position: absolute;
+
+  width: 45px;
+
+  height: 18px;
+
+  background: rgba(217,122,43,.45);
+
+  border-radius: 50%;
+
+  transform:
+
+    rotate(-25deg)
+
+    translate(-10px,25px);
+
+
+  filter: blur(3px);
+
+  animation: paint 0.35s infinite alternate;
+
+}
+
+
+@keyframes paint {
+
+  from {
+
+    opacity:.35;
+
+    transform:
+
+      rotate(-25deg)
+
+      translate(-10px,25px)
+
+      scale(.9);
+
+  }
+
+
+  to {
+
+    opacity:.8;
+
+    transform:
+
+      rotate(-25deg)
+
+      translate(-10px,25px)
+
+      scale(1.1);
+
+  }
+
+}
+
+
+/* ocultar cursor normal */
+
+.svg-container {
+
+  cursor:none;
+
+}
+}

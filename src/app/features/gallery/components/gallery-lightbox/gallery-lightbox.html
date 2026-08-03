@@ -1,0 +1,16 @@
+<div class="lightbox">
+
+    <button class="close" (click)="close.emit()">
+        ✕
+    </button>
+
+    <!-- <img
+        [src]="image.src"
+        [alt]="image.alt"> -->
+<app-protected-image
+    [src]="image.src"
+    [watermark]="'a.m.art.inez'"
+    [alt]="image.alt"
+    class="gallery-image"
+  ></app-protected-image>
+</div>

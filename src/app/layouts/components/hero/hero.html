@@ -1,0 +1,46 @@
+<section class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-text">
+        <span class="hero-tag">
+          {{ tag }}
+        </span>
+
+        <h1>
+          {{ title }}
+        </h1>
+
+        <h2>
+          {{ subtitle }}
+        </h2>
+
+        <p>
+          {{ description }}
+        </p>
+
+        <div class="hero-actions">
+          @if (primaryButton) {
+            <a [routerLink]="primaryLink" class="btn btn-primary">
+              {{ primaryButton }}
+            </a>
+          }
+
+          @if (secondaryButton) {
+            <a [routerLink]="secondaryLink" class="btn btn-outline">
+              {{ secondaryButton }}
+            </a>
+          }
+        </div>
+      </div>
+
+      <div class="hero-image">
+        <app-protected-image
+          [src]="image"
+          [watermark]="'a.m.art.inez'"
+          [alt]="title"
+          class="gallery-image"
+        ></app-protected-image>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,33 @@
+<section class="gallery">
+
+  <div class="container-fluid">
+
+    <div class="row gy-4 justify-content-center">
+
+      @for (image of images; track image.src) {
+
+        <div class="col-xl-3 col-lg-4 col-md-6">
+
+          <app-gallery-card
+            [image]="image"
+            (open)="openLightbox($event)">
+          </app-gallery-card>
+
+        </div>
+
+      }
+
+    </div>
+
+  </div>
+
+</section>
+
+@if (showLightbox && selectedImage) {
+
+  <app-gallery-lightbox
+    [image]="selectedImage"
+    (close)="closeLightbox()">
+  </app-gallery-lightbox>
+
+}

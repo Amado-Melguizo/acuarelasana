@@ -1,0 +1,19 @@
+<div
+  class="protected-container"
+  (contextmenu)="prevent($event)"
+  (dragstart)="prevent($event)"
+  (selectstart)="prevent($event)"
+>
+
+  <canvas
+    #canvas
+    class="protected-canvas">
+  </canvas>
+
+  <div
+    class="overlay"
+    (contextmenu)="prevent($event)"
+    (dragstart)="prevent($event)">
+  </div>
+
+</div>

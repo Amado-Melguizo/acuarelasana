@@ -1,0 +1,31 @@
+<div class="gallery-card">
+  <app-protected-image
+    [src]="image.src"
+    [watermark]="'a.m.art.inez'"
+    [alt]="image.alt"
+    class="gallery-image"
+  >
+  </app-protected-image>
+
+  <div class="gallery-overlay">
+    <div class="gallery-info">
+      <h4>{{ image.title }}</h4>
+
+      @if (price) {
+        <span>{{ price }}</span>
+      }
+    </div>
+
+    <div class="gallery-actions">
+      <button (click)="openImage()">
+        <i class="bi bi-search"></i>
+      </button>
+
+      <button>
+        <i class="bi bi-link-45deg"></i>
+      </button>
+
+      <button class="btn btn-primary" (click)="requestPainting()">Solicitar este cuadro</button>
+    </div>
+  </div>
+</div>
