@@ -1,104 +1,62 @@
 <section class="price-guide">
+  <div class="container">
+    <div class="section-header">
+      <span>Precios</span>
 
-    <div class="container">
+      <h2>Guía orientativa</h2>
 
-        <div class="section-header">
-
-            <span>Precios</span>
-
-            <h2>Guía orientativa</h2>
-
-            <p>
-
-                Cada obra se realiza de forma completamente artesanal.
-                El presupuesto final dependerá del tamaño, nivel de detalle
-                y características de cada encargo.
-
-            </p>
-
-        </div>
-
-        <div class="price-grid">
-
-            @for(price of prices; track price.title){
-
-            <article class="price-card">
-
-                @if(price.popular){
-
-                <div class="badge">
-
-                    Más solicitado
-
-                </div>
-
-                }
-
-                <div class="icon">
-
-                    <i class="bi {{price.icon}}"></i>
-
-                </div>
-
-                <h3>
-
-                    {{price.title}}
-
-                </h3>
-
-                <p>
-
-                    {{price.description}}
-
-                </p>
-
-                <ul>
-
-                    @for(feature of price.features; track feature){
-
-                    <li>
-
-                        <i class="bi bi-check-circle-fill"></i>
-
-                        {{feature}}
-
-                    </li>
-
-                    }
-
-                </ul>
-
-                <div class="price">
-
-                    {{price.price}}
-
-                </div>
-
-            </article>
-
-            }
-
-        </div>
-
-        <div class="price-note">
-
-            <i class="bi bi-info-circle"></i>
-
-            <div>
-
-                <h4>Presupuesto personalizado</h4>
-
-                <p>
-
-                    El precio puede variar según el tamaño, número de personas o
-                    animales, nivel de detalle, materiales utilizados y plazo de entrega.
-
-                </p>
-
-            </div>
-
-        </div>
-
+      <p>
+        Cada obra se realiza de forma completamente artesanal. El presupuesto final dependerá del
+        tamaño, nivel de detalle y características de cada encargo.
+      </p>
     </div>
 
+    <div class="price-grid">
+      @for (price of prices; track price.title) {
+        <article class="price-card">
+          @if (price.badge) {
+            <div class="badge">{{ price.badge }}</div>
+          }
+
+          <div class="icon">
+            <i class="bi {{ price.icon }}"></i>
+          </div>
+
+          <h3>{{ price.title }}</h3>
+
+          <p class="description">
+            {{ price.description }}
+          </p>
+
+          <ul class="features">
+            @for (feature of price.features; track feature) {
+              <li>
+                <i class="bi bi-check-circle-fill"></i>
+                {{ feature }}
+              </li>
+            }
+          </ul>
+
+          <div class="price">
+            <span>Desde </span>
+
+            <strong>{{ price.startingPrice }} €</strong>
+          </div>
+        </article>
+      }
+    </div>
+
+    <div class="price-note">
+      <i class="bi bi-info-circle"></i>
+
+      <div>
+        <h4>Presupuesto personalizado</h4>
+
+        <p>
+          El precio puede variar según el tamaño, número de personas o animales, nivel de detalle,
+          materiales utilizados y plazo de entrega.
+        </p>
+      </div>
+    </div>
+  </div>
 </section>

@@ -1,33 +1,182 @@
 .service-request {
 
-    padding: 80px 0;
+    padding: 100px 0;
+
+    background: linear-gradient(
+        180deg,
+        #faf8f4 0%,
+        #ffffff 100%
+    );
 
 }
 
-label {
+.service-request form{
 
-    font-weight: 600;
-    margin-bottom: .5rem;
-    display: block;
+    background:#fff;
+
+    padding:50px;
+
+    border-radius:28px;
+
+    box-shadow:0 18px 45px rgba(0,0,0,.08);
+
+    border:1px solid rgba(0,0,0,.05);
+
+}
+
+.section-header{
+
+    margin-bottom:50px;
+
+}
+
+.section-header h2{
+
+    font-size:2.6rem;
+
+    margin-bottom:15px;
+
+}
+
+.section-header p{
+
+    color:#666;
+
+    max-width:720px;
+
+    margin:auto;
+
+    line-height:1.8;
+
+}
+
+label{
+
+    display:block;
+
+    margin-bottom:10px;
+
+    font-weight:600;
+
+    color:#333;
 
 }
 
 .form-control,
-.form-select {
+.form-select{
 
-    min-height: 48px;
+    min-height:56px;
+
+    border-radius:14px;
+
+    border:1px solid #ddd;
+
+    padding:0 18px;
+
+    transition:.25s;
+
+    box-shadow:none;
 
 }
 
-textarea {
+textarea.form-control{
 
-    resize: vertical;
+    min-height:180px;
+
+    padding:18px;
+
+    resize:vertical;
 
 }
 
-button {
+.form-control:focus,
+.form-select:focus{
 
-    margin-top: 1rem;
-    min-width: 220px;
+    border-color:#c98942;
+
+    box-shadow:0 0 0 4px rgba(201,137,66,.15);
+
+}
+
+.form-control:disabled,
+.form-select:disabled{
+
+    background:#f6f6f6;
+
+    color:#777;
+
+    opacity:1;
+
+    cursor:not-allowed;
+
+}
+
+.btn{
+
+    margin-top:20px;
+
+    min-width:260px;
+
+    height:56px;
+
+    border:none;
+
+    border-radius:50px;
+
+    background:#c98942;
+
+    color:white;
+
+    font-weight:700;
+
+    font-size:1rem;
+
+    transition:.3s;
+
+}
+
+.btn:hover{
+
+    background:#b97a34;
+
+    transform:translateY(-3px);
+
+    box-shadow:0 14px 28px rgba(201,137,66,.35);
+
+}
+
+.mb-3{
+
+    margin-bottom:1.8rem !important;
+
+}
+
+@media(max-width:768px){
+
+    .service-request{
+
+        padding:80px 0;
+
+    }
+
+    .service-request form{
+
+        padding:30px 22px;
+
+        border-radius:20px;
+
+    }
+
+    .section-header h2{
+
+        font-size:2rem;
+
+    }
+
+    .btn{
+
+        width:100%;
+
+    }
 
 }

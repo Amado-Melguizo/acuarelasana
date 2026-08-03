@@ -58,6 +58,12 @@
 
     position:relative;
 
+    display:flex;
+
+    flex-direction:column;
+
+    height:100%;
+
     background:white;
 
     border-radius:22px;
@@ -142,6 +148,8 @@
 
     line-height:1.7;
 
+    min-height:85px;
+
 }
 
 .price-card ul{
@@ -151,6 +159,8 @@
     padding:0;
 
     margin:25px 0;
+
+    flex:1;
 
 }
 
@@ -172,11 +182,37 @@
 
 .price{
 
+    margin-top:auto;
+
+    padding-top:24px;
+
+    border-top:1px solid rgba(0,0,0,.08);
+
+}
+
+.price span{
+
+    display:block;
+
+    font-size:.9rem;
+
+    color:#777;
+
+    margin-bottom:4px;
+
+}
+
+.price strong{
+
+    display:block;
+
     font-size:2rem;
 
     font-weight:700;
 
     color:#c98942;
+
+    line-height:1;
 
 }
 

@@ -1,4 +1,4 @@
-<section id="request-form" class="request-form" class="service-request">
+<section id="request-form" class="request-form service-request">
   <div class="container">
     <div class="section-header text-center">
       <h2>Solicitar un encargo</h2>
@@ -29,6 +29,22 @@
           <input type="text" class="form-control" formControlName="phone" />
         </div>
 
+        <!-- Obra existente -->
+
+        <div class="col-md-6 mb-3">
+          <label>Obra de la galería (opcional)</label>
+
+          <select class="form-select" formControlName="paintingSelection">
+            <option value="">Selecciona una obra...</option>
+
+            @for (painting of artworks(); track painting.id) {
+              <option [value]="painting.id">
+                {{ painting.title }}
+              </option>
+            }
+          </select>
+        </div>
+
         <div class="col-md-6 mb-3">
           <label>Tipo de solicitud *</label>
 
@@ -37,9 +53,13 @@
 
             <option>Retrato</option>
 
+            <option>Retrato de mascota</option>
+
             <option>Acuarela personalizada</option>
 
-            <option>Acuarela desde fotografía</option>
+            <option>Paisaje</option>
+
+            <option>Arte botánico</option>
 
             <option>Dibujo a carboncillo</option>
 
@@ -47,16 +67,23 @@
           </select>
         </div>
 
-        <div class="col-12 mb-3">
-          <label>Nombre del cuadro (si aplica)</label>
+        <!-- Nombre libre de la obra -->
 
-          <input type="text" class="form-control" formControlName="paintingTitle" />
+        <div class="col-md-6 mb-3">
+          <label>Nombre de la obra (opcional)</label>
+
+          <input
+            type="text"
+            class="form-control"
+            formControlName="paintingTitle"
+            placeholder="Ej. Recuerdo familiar"
+          />
         </div>
 
         <div class="col-12 mb-3">
           <label>Descripción *</label>
 
-          <textarea rows="6" class="form-control" formControlName="description"> </textarea>
+          <textarea rows="6" class="form-control" formControlName="description"></textarea>
         </div>
 
         <div class="col-md-4 mb-3">
@@ -74,7 +101,7 @@
         <div class="col-md-4 mb-3">
           <label>Presupuesto (€)</label>
 
-          <input class="form-control" formControlName="budget" />
+          <input type="number" class="form-control" formControlName="budget" />
         </div>
 
         <div class="col-md-6 mb-4">

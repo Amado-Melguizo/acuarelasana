@@ -1,7 +1,6 @@
 Cosas pendientes:
 
 Tareas sencillas 
-- Arreglar fallo del 404 en el refresco de las páginas
 - Arreglar el 404 mejorar la pintura del pájaro y hacer que el ratón desaparezca cuando la flecha va or el svg
 
 Tareas medias 
@@ -12,8 +11,6 @@ Tareas medias
 
 Tareas largas
 - Revisar carga de imagenes
-- Mejorar formulario de la página de servicios
-- Mejorar correo de servicios
 
 Tareas finales
 - Testear la web entera con cobertura del 80%
