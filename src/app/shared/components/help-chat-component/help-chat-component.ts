@@ -234,8 +234,12 @@ Ana responderá personalmente lo antes posible.`,
       this.sendMessage();
     }
   }
-  go(route: string) {
-    this.router.navigateByUrl(route);
+  go(route: string): void {
+    this.router.navigateByUrl(route).then(() => {
+      this.opened = false;
+
+      this.minimized = false;
+    });
   }
   executeAction(action: ChatAction) {
     if (action.question) {
