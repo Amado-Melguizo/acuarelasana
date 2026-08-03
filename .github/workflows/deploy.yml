@@ -30,6 +30,8 @@ jobs:
 
       - run: npm run build -- --configuration production --base-href /acuarelasana/
 
+      - name: Create SPA fallback
+        run: cp dist/acuarelasana/browser/index.html dist/acuarelasana/browser/404.html
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist/acuarelasana/browser
