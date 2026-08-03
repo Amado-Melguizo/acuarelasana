@@ -200,4 +200,7 @@ Frontend Software Engineer
 
 Give it a ⭐ on GitHub!
 
+For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
+Cambio del readme y prueba del copilot
 It helps support the project and motivates future improvements.
