@@ -1,0 +1,43 @@
+<app-header></app-header>
+<section class="page-container">
+  <header class="admin-header">
+    <div>
+      <h1>Panel de administración</h1>
+
+      <p>Gestiona las obras de Arte Ana M.</p>
+    </div>
+    <div class="admin-user">
+      <button type="button" (click)="logout()">Cerrar sesión</button>
+    </div>
+  </header>
+
+  <section class="stats">
+    <div class="card">
+      <span>Total</span>
+      <h2>{{ total }}</h2>
+    </div>
+
+    <div class="card">
+      <span>Disponibles</span>
+      <h2>{{ available }}</h2>
+    </div>
+
+    <div class="card">
+      <span>Vendidas</span>
+      <h2>{{ sold }}</h2>
+    </div>
+  </section>
+
+  <section class="content">
+    <div class="left">
+      <app-artwork-form [artwork]="selectedArtwork">
+        (cancelEdit)="selectedArtwork = undefined">
+      </app-artwork-form>
+    </div>
+
+    <div class="right">
+      <app-artwork-table (edit)="onEditArtwork($event)"> </app-artwork-table>
+    </div>
+  </section>
+</section>
+<app-footer></app-footer>

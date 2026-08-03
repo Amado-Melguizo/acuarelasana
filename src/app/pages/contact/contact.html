@@ -1,0 +1,134 @@
+<app-preloader [loaded]="true"></app-preloader>
+
+<app-header></app-header>
+<main class="page-content">
+
+<app-hero
+tag="Contacto"
+title="¿Hablamos?"
+subtitle="Estoy encantada de ayudarte"
+description="Si tienes cualquier duda, propuesta o simplemente quieres ponerte en contacto conmigo, estaré encantada de responderte."
+image="assets/images/gallery/home/botanica_3.jpg">
+</app-hero>
+
+<section class="contact">
+
+    <div class="container">
+
+        <div class="contact-grid">
+
+            <div class="contact-info">
+
+                <h2>
+
+                    Información de contacto
+
+                </h2>
+
+                <p>
+
+                    Puedes contactar conmigo utilizando cualquiera de los siguientes medios.
+
+                </p>
+
+                <div class="contact-card">
+
+                    <i class="bi bi-envelope"></i>
+
+                    <div>
+
+                        <h4>Email</h4>
+
+                        <span>acuarelasanamartinez@gmail.com</span>
+
+                    </div>
+
+                </div>
+
+                <div class="contact-card">
+
+                    <i class="bi bi-instagram"></i>
+
+                    <div>
+
+                        <h4>Instagram</h4>
+
+                        <a href="https://www.instagram.com/a.m.art.inez/">Cuenta Oficial a.m.art.inez</a>
+
+                    </div>
+
+                </div>
+
+                <div class="contact-card">
+
+                    <i class="bi bi-geo-alt"></i>
+
+                    <div>
+
+                        <h4>Ubicación</h4>
+
+                        <span>Madrid · España</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <form
+                class="contact-form"
+                [formGroup]="form"
+                (ngSubmit)="submit()">
+
+                <div class="row">
+
+                    <div class="col-md-6">
+
+                        <input
+                            class="form-control"
+                            placeholder="Nombre"
+                            formControlName="name">
+
+                    </div>
+
+                    <div class="col-md-6">
+
+                        <input
+                            class="form-control"
+                            placeholder="Correo"
+                            formControlName="email">
+
+                    </div>
+
+                </div>
+
+                <input
+                    class="form-control mt-3"
+                    placeholder="Asunto"
+                    formControlName="subject">
+
+                <textarea
+                    rows="7"
+                    class="form-control mt-3"
+                    placeholder="Escribe tu mensaje..."
+                    formControlName="message">
+                </textarea>
+
+                <button
+                    class="btn btn-primary mt-4">
+
+                    Enviar mensaje
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+<app-footer></app-footer>
+
+<app-scroll-top></app-scroll-top>

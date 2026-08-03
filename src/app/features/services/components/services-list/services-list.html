@@ -1,0 +1,68 @@
+<section class="services-list">
+  <div class="container">
+    <div class="section-header">
+      <span>Servicios</span>
+
+      <h2>¿Qué puedo crear para ti?</h2>
+
+      <p>
+        Cada obra está realizada completamente a mano utilizando materiales de alta calidad. Tú
+        aportas la idea y yo la convierto en una acuarela única.
+      </p>
+    </div>
+
+    <div class="services-grid">
+      @for (service of services; track service.id) {
+        <article class="service-card">
+          @if (service.badge) {
+            <div class="badge">
+              {{ service.badge }}
+            </div>
+          }
+
+          <div class="icon">
+            <i class="bi {{ service.icon }}"></i>
+          </div>
+
+          <div class="content">
+            <span class="subtitle">
+              {{ service.subtitle }}
+            </span>
+
+            <h3>
+              {{ service.title }}
+            </h3>
+
+            <p>
+              {{ service.description }}
+            </p>
+
+            <ul>
+              @for (feature of service.features; track feature) {
+                <li>
+                  <i class="bi bi-check-circle-fill"></i>
+
+                  {{ feature }}
+                </li>
+              }
+            </ul>
+          </div>
+
+          <div class="footer">
+            <div class="price">
+              Desde
+
+              <strong>{{ service.startingPrice }} €</strong>
+            </div>
+
+            <button class="btn-service" (click)="selectService(service)">
+              Solicitar encargo
+
+              <i class="bi bi-arrow-right"></i>
+            </button>
+          </div>
+        </article>
+      }
+    </div>
+  </div>
+</section>

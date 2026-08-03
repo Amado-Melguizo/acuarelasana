@@ -1,0 +1,59 @@
+<div class="service-card">
+
+  <div class="service-image">
+
+    <img
+      [src]="service.image"
+      [alt]="service.title">
+
+  </div>
+
+  <div class="service-content">
+
+    <div class="service-icon">
+
+      <i [class]="'bi ' + service.icon"></i>
+
+    </div>
+
+    <h3>
+
+      {{ service.title }}
+
+    </h3>
+
+    <h5>
+
+      {{ service.subtitle }}
+
+    </h5>
+
+    <p>
+
+      {{ service.description }}
+
+    </p>
+
+    <div class="service-footer">
+
+      <span>
+
+        Desde
+
+        {{ service.startingPrice | currency:'EUR':'symbol':'1.0-0':'es' }}
+
+      </span>
+
+      <button
+        type="button"
+        (click)="selectService()">
+
+        Solicitar presupuesto
+
+      </button>
+
+    </div>
+
+  </div>
+
+</div>
